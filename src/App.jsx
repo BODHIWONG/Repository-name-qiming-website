@@ -1,19 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function Layout({ children }) {
+  const [lang, setLang] = useState("zh");
+
+  const t = {
+    zh: {
+      home: "首页",
+      destiny: "命理",
+      fengshui: "风水",
+      strategy: "战略",
+      qimen: "奇门",
+      enhancer: "能量物",
+    },
+    en: {
+      home: "Home",
+      destiny: "Destiny",
+      fengshui: "Feng Shui",
+      strategy: "Strategy",
+      qimen: "Qi Men",
+      enhancer: "Enhancers",
+    },
+  };
+
   return (
+  
     <div className="min-h-screen bg-black text-white font-sans">
       <nav className="flex justify-between items-center px-8 py-6 bg-black border-b border-gray-800">
-        <div className="text-xl font-bold">奇明战略风水 Qiming</div>
-        <div className="space-x-6 text-gray-300">
-          <Link to="/">首页 Home</Link>
-          <Link to="/destiny">命理 Destiny</Link>
-          <Link to="/fengshui">风水 Feng Shui</Link>
-          <Link to="/strategy">战略 Strategy</Link>
-          <Link to="/qimen">占卦 Qimen</Link>
-          <Link to="/enhancer">能量物 Enhancers</Link>
-        </div>
+        <div className="text-xl font-bold">
+  {lang === "zh" ? "奇明战略风水 : "Qiming Strategic Feng Shui"}
+</div>
+        <div className="space-x-6 text-gray-300 flex items-center">
+  <Link to="/">{t[lang].home}</Link>
+  <Link to="/destiny">{t[lang].destiny}</Link>
+  <Link to="/fengshui">{t[lang].fengshui}</Link>
+  <Link to="/strategy">{t[lang].strategy}</Link>
+  <Link to="/qimen">{t[lang].qimen}</Link>
+  <Link to="/enhancer">{t[lang].enhancer}</Link>
+
+  <button
+    onClick={() => setLang(lang === "zh" ? "en" : "zh")}
+    className="ml-4 px-3 py-1 border border-gray-500 rounded text-sm hover:bg-gray-700 transition"
+  >
+    {lang === "zh" ? "EN" : "中文"}
+  </button>
+</div>
       </nav>
       {children}
       <footer className="text-center text-gray-500 py-10 border-t border-gray-800">
@@ -23,17 +54,17 @@ function Layout({ children }) {
   );
 }
 
-function PageWrapper({ title, children, cta }) {
+function PageWrapper({ title, children, cta }
   return (
     <Layout>
       <div className="px-8 py-24 max-w-5xl mx-auto">
         <h1 className="text-5xl font-bold mb-10">{title}</h1>
-        <div className="text-gray-300 text-lg leading-8 space-y-6">{children}</div>
+         <text-lg leading-8 space-y-6">{children}</div>
         <a href="https://wa.me/6589418791" className="mt-12 inline-block bg-yellow-500 text-black px-8 py-4 rounded-2xl text-lg">
           {cta}
         </a>
       </div>
-    </Layout>
+    </Layout>--
   );
 }
 
