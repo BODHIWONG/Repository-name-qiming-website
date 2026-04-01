@@ -28,7 +28,7 @@ function Layout({ children }) {
     <div className="min-h-screen bg-black text-white font-sans">
       <nav className="flex justify-between items-center px-8 py-6 bg-black border-b border-gray-800">
         <div className="text-xl font-bold">
-  {lang === "zh" ? "奇明战略风水 : "Qiming Strategic Feng Shui"}
+  {lang === "zh" ? "奇明战略风水" : "Qiming Strategic Feng Shui"}
 </div>
         <div className="space-x-6 text-gray-300 flex items-center">
   <Link to="/">{t[lang].home}</Link>
