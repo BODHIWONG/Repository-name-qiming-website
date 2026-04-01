@@ -1,3 +1,4 @@
+
 import React, { useMemo, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
@@ -284,7 +285,8 @@ function AppRoutes({ lang, setLang }) {
 }
 
 export default function QimingWebsite() {
-  const browserLang = typeof window !== "undefined" && window.navigator.language?.toLowerCase().includes("zh") ? "zh" : "en";
+  const browserLang =
+    typeof window !== "undefined" && window.navigator.language?.toLowerCase().includes("zh") ? "zh" : "en";
   const [lang, setLang] = useState(browserLang || "en");
   const stableLang = useMemo(() => (lang === "zh" ? "zh" : "en"), [lang]);
 
@@ -294,4 +296,3 @@ export default function QimingWebsite() {
     </Router>
   );
 }
-
