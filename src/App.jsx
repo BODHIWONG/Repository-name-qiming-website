@@ -563,13 +563,12 @@ function HeroSection({ lang }) {
           </div>
         </div>
 
-        <div className="grid gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
           <div className="bg-gray-900 border border-gray-800 rounded-3xl p-4 shadow-xl">
             <SafeImage
               src="/master-main.jpg"
               alt="Master Huang Qiming"
-              className="w-full aspect-[3/4] object-cover object-top rounded-2xl shadow-[0_0_40px_rgba(255,215,0,0.25)]"
-
+              className="w-full h-auto rounded-2xl shadow-[0_0_40px_rgba(255,215,0,0.25)]"
           <div className="grid grid-cols-3 gap-4">
             {t.stats.map((item) => (
               <div
