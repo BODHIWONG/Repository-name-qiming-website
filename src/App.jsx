@@ -564,7 +564,7 @@ function HeroSection({ lang }) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
-          <div className="bg-gray-900 border border-gray-800 rounded-3xl p-4 shadow-xl">
+         <div className="bg-gray-900 border border-gray-800 rounded-3xl p-4 shadow-xl overflow-visible">
             <SafeImage
               src="/master-main.jpg"
               alt="Master Huang Qiming"
