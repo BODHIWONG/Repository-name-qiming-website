@@ -520,7 +520,7 @@ function HeroSection({ lang }) {
 
   return (
     <section className="px-6 md:px-8 py-16 md:py-24 bg-gradient-to-b from-black to-gray-900">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 items-center">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 items-start">
         <div>
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-yellow-500/30 bg-yellow-500/10 text-yellow-400 text-sm mb-5">
             <span>Qimen · Feng Shui · Strategy</span>
@@ -564,11 +564,11 @@ function HeroSection({ lang }) {
         </div>
 
         <div className="flex flex-col gap-6">
-          <div className="bg-gray-900 border border-gray-800 rounded-3xl p-4 shadow-xl">
+          <div className="bg-gray-900 border border-gray-800 rounded-3xl overflow-hidden shadow-xl">
             <SafeImage
               src="/master-main.jpg"
               alt="Master Huang Qiming"
-              className="w-full h-auto rounded-2xl shadow-[0_0_40px_rgba(255,215,0,0.25)]"
+              className="w-full h-auto block shadow-[0_0_40px_rgba(255,215,0,0.25)]"
             />
           </div>
           <div className="grid grid-cols-3 gap-4">
