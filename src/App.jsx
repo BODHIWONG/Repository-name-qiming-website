@@ -568,8 +568,7 @@ function HeroSection({ lang }) {
             <SafeImage
               src="/master-main.jpg"
               alt="Master Huang Qiming"
-              className="w-full h-[560px] object-cover object-[center_15%] rounded-2xl shadow-[0_0_40px_rgba(255,215,0,0.25)]"
-
+              className="w-full aspect-[3/4] object-cover object-top rounded-2xl shadow-[0_0_40px_rgba(255,215,0,0.25)]"
 
           <div className="grid grid-cols-3 gap-4">
             {t.stats.map((item) => (
