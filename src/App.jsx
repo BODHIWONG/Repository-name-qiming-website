@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+=import React, { useMemo, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 const WHATSAPP_NUMBER = "6589418791";
@@ -448,7 +448,7 @@ function SectionTitle({ title, text }) {
   );
 }
 
-function SafeImage({ src, alt, className, fallback = "/master-main.jpg" }) {
+function SafeImage({ src, alt, className, fallback = "/master-main-new.jpg" }) {
   return (
     <img
       src={src}
@@ -568,7 +568,7 @@ function HeroSection({ lang }) {
             <SafeImage
               src="/master-main.jpg"
               alt="Master Huang Qiming"
-              className="w-full h-[420px] object-cover rounded-2xl"
+              className=className="w-full h-[420px] object-cover object-top rounded-2xl"
             />
           </div>
 
