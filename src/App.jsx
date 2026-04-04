@@ -568,7 +568,7 @@ function HeroSection({ lang }) {
             <SafeImage
               src="/master-main.jpg"
               alt="Master Huang Qiming"
-              className=className="w-full h-[480px] object-cover object-center rounded-2xl shadow-[0_0_40px_rgba(255,215,0,0.15)]"
+              className="w-full h-[480px] object-cover object-center rounded-2xl shadow-[0_0_40px_rgba(255,215,0,0.15)]"
             />
           </div>
 
