@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://qiming-fengshui.vercel.app/sitemap.xml
