@@ -353,13 +353,16 @@ function SectionTitle({ title, text }) {
   );
 }
 
-function SafeImage({ src, alt, className, fallback = "/master-main.jpg" }) {
+function SafeImage({ src, alt, className, fallback = "/master-main.jpg", width, height }) {
   return (
     <img
       src={src}
       alt={alt}
       className={className}
       loading="lazy"
+      decoding="async"
+      width={width}
+      height={height}
       onError={(e) => {
         if (e.currentTarget.dataset.fallbackApplied === "true") return;
         e.currentTarget.dataset.fallbackApplied = "true";
@@ -474,7 +477,7 @@ function Layout({ lang, setLang, children }) {
             ? "你好，我想咨询奇明战略风水服务。"
             : "Hello, I would like to enquire about Qiming Strategic Feng Shui services."
         )}
-        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-full shadow-lg font-semibold transition"
+        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded-full shadow-lg font-semibold transition"
         aria-label="WhatsApp"
       >
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -619,6 +622,8 @@ function HeroSection({ lang }) {
               src="/master-main.jpg"
               alt="Master Huang Qiming 黄启明大师"
               className="w-full h-auto block"
+              width="830"
+              height="1046"
             />
           </div>
 
@@ -753,11 +758,13 @@ function ProductsSection({ lang }) {
               className="bg-black border border-gray-800 rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition hover:border-yellow-500/30"
             >
               <div className="aspect-square bg-gray-900 overflow-hidden">
-                <SafeImage
-                  src={item.image}
-                  alt={item.name}
-                  className="w-full h-full object-cover hover:scale-105 transition duration-300"
-                />
+              <SafeImage
+                src={item.image}
+                alt={item.name}
+                className="w-full h-full object-cover hover:scale-105 transition duration-300"
+                width="400"
+                height="400"
+              />
               </div>
               <div className="p-4">
                 <div className="inline-block text-xs bg-yellow-500/15 text-yellow-400 border border-yellow-500/30 px-2 py-0.5 rounded-full mb-2">
@@ -780,7 +787,7 @@ function ProductsSection({ lang }) {
           ))}
         </div>
 
-        <p className="text-center text-gray-500 text-sm mt-6">{t.productsNote}</p>
+        <p className="text-center text-gray-400 text-sm mt-6">{t.productsNote}</p>
 
         <div className="text-center mt-8">
           <a
@@ -815,6 +822,8 @@ function MasterSection({ lang }) {
             src="/master-main.jpg"
             alt="Master Huang Qiming 黄启明大师"
             className="w-full h-auto block"
+            width="830"
+            height="1046"
           />
         </div>
 
@@ -825,6 +834,8 @@ function MasterSection({ lang }) {
               src="/master-real.jpg"
               alt="Qiming Feng Shui Shop Singapore"
               className="w-full h-auto block"
+              width="800"
+              height="600"
             />
           </div>
 
@@ -864,11 +875,11 @@ function QRSection({ lang }) {
     <section className="px-6 md:px-8 py-16 md:py-20 max-w-5xl mx-auto text-center bg-gray-950 rounded-3xl my-10">
       <SectionTitle title={t.qrTitle} text={t.qrText} />
       <div className="max-w-xs mx-auto bg-white rounded-3xl p-4 shadow-lg mb-6">
-        <SafeImage src="/whatsapp-qr.jpg" alt="WhatsApp QR Code" className="w-full h-auto rounded-2xl" />
+        <SafeImage src="/whatsapp-qr.jpg" alt="WhatsApp QR Code" className="w-full h-auto rounded-2xl" width="400" height="400" />
       </div>
       <a
         href={`https://wa.me/${WHATSAPP_NUMBER}`}
-        className="inline-block bg-green-500 hover:bg-green-400 text-white px-8 py-4 rounded-2xl text-lg font-semibold transition"
+          className="inline-block bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-2xl text-lg font-semibold transition"
       >
         {lang === "zh" ? "直接 WhatsApp 联系" : "Contact via WhatsApp"}
       </a>
