@@ -7,8 +7,8 @@ const WA_BASE = `https://wa.me/${WHATSAPP_NUMBER}`;
 // ─── 内容数据 ────────────────────────────────────────────────────────────────
 const content = {
   zh: {
-    brand: "奇明战略风水",
-    brandShort: "奇明战略风水",
+    brand: "奇明旺财风水",
+    brandShort: "奇明旺财风水",
     toggle: "EN",
     nav: {
       home: "首页",
@@ -20,7 +20,7 @@ const content = {
     },
     addressLabel: "地址",
     address: "Blk 210 New Upper Changi Road #01-729 Singapore 460210",
-    heroTitle: "奇明战略风水",
+    heroTitle: "奇明旺财风水",
     heroSubtitle: "风水是基础，战略是应用，结果才是目的。",
     heroDescription:
       "结合命理、风水与奇门遁甲，为个人、家庭与企业主提供关键节点的决策支持。不是空谈玄学，而是帮助你在对的时间，做更有胜算的选择。",
@@ -146,12 +146,12 @@ const content = {
     qrTitle: "扫码直接联系",
     qrText: "可通过 WhatsApp 直接咨询与预约，扫码即达。",
     aboutTitle: "关于奇明",
-    aboutText: "奇明战略风水专注于命理咨询、风水布局、战略规划、占卦问事，以及吉祥物与水晶能量配置。我们强调环境、时间与人的匹配关系，帮助客户在关键节点做出更有胜算的选择。",
+    aboutText: "奇明旺财风水专注于命理咨询、风水布局、战略规划、占卦问事，以及吉祥物与水晶能量配置。我们强调环境、时间与人的匹配关系，帮助客户在关键节点做出更有胜算的选择。",
     footerNav: ["首页", "命理咨询", "风水布局", "战略规划", "占卦问事"],
     footerNavPaths: ["/", "/destiny", "/fengshui", "/strategy", "/qimen"],
     footerHours: "营业时间：周一至周六 10:00 – 19:00",
-    footer: "© 2025 奇明战略风水 · WhatsApp: +65 89418791",
-    pageTrustTitle: "为什么客户会选择奇明战略风水？",
+    footer: "© 2025 奇明旺财风水 · WhatsApp: +65 89418791",
+    pageTrustTitle: "为什么客户会选择奇明旺财风水？",
     pageTrusts: [
       "围绕结果导向给出建议，而不是泛泛而谈",
       "兼顾环境、时间、人与目标的整体匹配",
@@ -196,7 +196,7 @@ const content = {
     },
   },
   en: {
-    brand: "Qiming Strategic Feng Shui",
+    brand: "Qiming Prosperity Feng Shui",
     brandShort: "Qiming Feng Shui",
     toggle: "中文",
     nav: {
@@ -209,7 +209,7 @@ const content = {
     },
     addressLabel: "Address",
     address: "Blk 210 New Upper Changi Road #01-729 Singapore 460210",
-    heroTitle: "Qiming Strategic Feng Shui",
+    heroTitle: "Qiming Prosperity Feng Shui",
     heroSubtitle: "Not fortune telling. We participate in critical decisions.",
     heroDescription:
       "We combine Destiny Analysis, Feng Shui, and Qimen Dunjia to support individuals, families, and business owners through key decisions. Based in Singapore, built for clients who care about timing, direction, and results.",
@@ -310,12 +310,12 @@ const content = {
     qrTitle: "Scan to Contact",
     qrText: "Scan the QR code to connect instantly on WhatsApp.",
     aboutTitle: "About Qiming",
-    aboutText: "Qiming Strategic Feng Shui focuses on destiny consultation, Feng Shui layout, strategic planning, Qimen divination, and enhancer or crystal configuration. We emphasize the alignment of environment, timing, and people so clients can make stronger decisions at key moments.",
+    aboutText: "Qiming Prosperity Feng Shui focuses on destiny consultation, Feng Shui layout, strategic planning, Qimen divination, and enhancer or crystal configuration. We emphasize the alignment of environment, timing, and people so clients can make stronger decisions at key moments.",
     footerNav: ["Home", "Destiny", "Feng Shui", "Strategy", "Qimen"],
     footerNavPaths: ["/", "/destiny", "/fengshui", "/strategy", "/qimen"],
     footerHours: "Mon – Sat: 10:00 AM – 7:00 PM",
-    footer: "© 2025 Qiming Strategic Feng Shui · WhatsApp: +65 89418791",
-    pageTrustTitle: "Why clients choose Qiming Strategic Feng Shui",
+    footer: "© 2025 Qiming Prosperity Feng Shui · WhatsApp: +65 89418791",
+    pageTrustTitle: "Why clients choose Qiming Prosperity Feng Shui",
     pageTrusts: [
       "Advice built around outcomes, not vague theory",
       "A full view of environment, timing, people, and goals",
@@ -561,8 +561,8 @@ function Layout({ lang, setLang, children }) {
       <a
         href={buildWhatsAppUrl(
           lang === "zh"
-            ? "你好，我想咨询奇明战略风水服务。"
-            : "Hello, I would like to enquire about Qiming Strategic Feng Shui services."
+            ? "你好，我想咨询奇明旺财风水服务。"
+            : "Hello, I would like to enquire about Qiming Prosperity Feng Shui services."
         )}
         className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded-full shadow-[0_0_20px_rgba(34,197,94,0.4)] font-semibold transition hover:scale-105"
         aria-label="WhatsApp"
@@ -639,7 +639,7 @@ function HeroSection({ lang }) {
           <p className="max-w-2xl text-gray-300 text-base md:text-lg leading-8 mb-8">{t.heroDescription}</p>
           <div className="flex flex-wrap gap-4 mb-8">
             <a
-              href={buildWhatsAppUrl(lang === "zh" ? "你好，我想预约奇明战略风水咨询。" : "Hello, I want to book a consultation.")}
+              href={buildWhatsAppUrl(lang === "zh" ? "你好，我想预约奇明旺财风水咨询。" : "Hello, I want to book a consultation.")}
               className="inline-block bg-yellow-500 text-black px-8 py-4 rounded-2xl text-lg font-semibold shadow-[0_0_30px_rgba(234,179,8,0.4)] hover:bg-yellow-400 hover:shadow-[0_0_40px_rgba(234,179,8,0.6)] transition"
             >
               {t.heroPrimaryCta}
