@@ -183,10 +183,11 @@ const content = {
         cta: "预约战略咨询",
       },
       qimen: {
-        title: "占卦问事",
-        subtitle: "在关键节点，选择更有胜算的路径",
-        body: "通过奇门遁甲起局，对合作、投资、项目推进、出行、谈判、择日等具体问题给出判断建议，帮助您在复杂局面中看清形势与机会。",
-        points: ["项目与合作判断", "投资与行动时机", "出行与谈判择时", "关键问题快速决策"],
+        title: "占卦问事 · 奇门遁甲",
+        subtitle: "天机不可泄露，然善用者可趋吉避凶",
+        body: "奇门遁甲，被誉为中华术数之王，是古代帝王将相运筹帷幄的核心工具。它以时间为经、空间为纬，将天干地支、八卦九宫、五行生克融为一体，通过起局排盘，精准解析当下时空格局中的吉凶走势与行动窗口。\n\n启明大师作为奇门遁甲的正统传人，拥有16年以上的实战经验，将奇门遁甲广泛应用于预测占卦与风水布局两大核心领域。在预测层面，可针对具体问题快速起局，判断事件走向、合作成败、投资时机与风险；在风水布局层面，奇门遁甲可精准确定空间的吉方凶方、旺气所在，结合命主八字与入宅时间，制定最优化的布局方案，使空间能量与个人命格高度契合，从而达到旺财、旺运、旺健康的综合效果。",
+        body2: "奇门遁甲在风水布局中的应用，远超传统风水的范畴。它不仅考量空间的山向水法，更将时间维度纳入布局体系——同一个空间，在不同的时间节点布局，效果截然不同。启明大师将奇门遁甲的时空合一理念与现代居家、商业空间深度结合，为客户提供真正因人、因时、因地制宜的个性化风水方案。",
+        points: ["项目与合作成败判断", "投资与行动最佳时机", "出行、谈判、签约择时", "关键决策快速占断", "风水布局吉方精准定位", "入宅开业择吉日"],
         cta: "立即占卦咨询",
       },
       enhancer: {
@@ -357,10 +358,11 @@ const content = {
         cta: "Book Strategic Consultation",
       },
       qimen: {
-        title: "Qimen Divination",
-        subtitle: "Choose the path with better odds.",
-        body: "Using Qimen Dunjia charts, we assess specific issues such as business cooperation, investments, project timing, travel, negotiations, and important action windows so you can act with greater clarity.",
-        points: ["Project and cooperation analysis", "Investment and timing", "Travel and negotiation timing", "Fast decision support"],
+        title: "Qimen Divination · Qi Men Dun Jia",
+        subtitle: "Heaven's timing cannot be revealed — but the wise can use it to prosper.",
+        body: "Qi Men Dun Jia (奇門遁甲) is widely regarded as the crown jewel of Chinese metaphysics — the strategic tool used by ancient emperors and generals to gain decisive advantage. It integrates the Heavenly Stems, Earthly Branches, Eight Trigrams, Nine Palaces, and the Five Elements into a unified time-space system. By constructing a precise chart for any given moment, it reveals the flow of auspicious and inauspicious energies, and the optimal windows for action.\n\nMaster Qiming, as a lineage holder of Qi Men Dun Jia with over 16 years of real-world practice, applies this system across two core domains: divination and Feng Shui layout. For divination, he constructs a chart in response to a specific question — assessing outcomes, risks, timing, and strategic direction with remarkable precision. For Feng Shui, Qi Men Dun Jia enables exact identification of auspicious directions and energy concentrations within a space, combined with the resident's BaZi and the timing of entry, to produce a highly personalized layout that aligns the environment with the individual's destiny.",
+        body2: "The application of Qi Men Dun Jia in Feng Shui layout goes far beyond conventional methods. It introduces the time dimension into spatial analysis — the same space, laid out at different timing windows, produces dramatically different results. Master Qiming integrates this time-space unity principle with modern residential and commercial environments, delivering truly individualized Feng Shui solutions that are calibrated to the person, the moment, and the place.",
+        points: ["Project and partnership outcome analysis", "Optimal timing for investment and action", "Travel, negotiation, and contract timing", "Fast divination for key decisions", "Precise auspicious direction mapping", "Auspicious date selection for move-in or business launch"],
         cta: "Book Qimen Consultation",
       },
       enhancer: {
@@ -1413,6 +1415,11 @@ const PAGE_IMAGES = {
     "/fengshui-onsite-2.jpg",
     "/fengshui-onsite-3.jpg",
   ],
+  qimen: [
+    "/qimen-prediction-1.jpg",
+    "/qimen-prediction-2.jpg",
+    "/qimen-prediction-3.jpg",
+  ],
 };
 
 function ServicePage({ lang, setLang, pageKey }) {
@@ -1445,7 +1452,17 @@ function ServicePage({ lang, setLang, pageKey }) {
             )}
           </div>
         )}
-        <p className="text-gray-300 text-lg leading-8 mb-8">{page.body}</p>
+        <div className="text-gray-300 text-lg leading-8 mb-8 space-y-4">
+          {page.body.split('\n\n').map((para, i) => (
+            <p key={i}>{para}</p>
+          ))}
+        </div>
+        {page.body2 && (
+          <div className="bg-gray-900/60 border border-yellow-500/20 rounded-2xl p-6 mb-8">
+            <h3 className="text-yellow-400 font-semibold text-lg mb-3">{lang === 'zh' ? '奇门遁甲与风水布局的深度融合' : 'Qi Men Dun Jia in Feng Shui Layout'}</h3>
+            <p className="text-gray-300 leading-8">{page.body2}</p>
+          </div>
+        )}
         <div className="grid md:grid-cols-2 gap-4 mb-10">
           {page.points.map((point) => (
             <div key={point} className="bg-gray-900 border border-gray-800 rounded-2xl p-5 text-gray-300 flex items-center gap-3">
