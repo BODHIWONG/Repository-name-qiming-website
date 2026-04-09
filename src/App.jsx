@@ -1403,25 +1403,41 @@ function PurificationPage({ lang, setLang }) {
 
 // ─── Service Page ─────────────────────────────────────────────────────────────
 const PAGE_IMAGES = {
-  destiny: "/destiny-consultation.jpg",
+  destiny: [
+    "/destiny-consultation.jpg",
+    "/destiny-consultation-2.jpg",
+    "/destiny-consultation-3.jpg",
+  ],
 };
 
 function ServicePage({ lang, setLang, pageKey }) {
   const t = content[lang];
   const page = t.pages[pageKey];
-  const pageImage = PAGE_IMAGES[pageKey];
+  const pageImages = PAGE_IMAGES[pageKey];
   return (
     <Layout lang={lang} setLang={setLang}>
       <section className="px-6 md:px-8 py-16 md:py-20 max-w-5xl mx-auto">
         <p className="text-yellow-400 mb-4 font-medium">{page.subtitle}</p>
         <h1 className="text-4xl md:text-5xl font-bold mb-8">{page.title}</h1>
-        {pageImage && (
-          <div className="mb-10 rounded-3xl overflow-hidden border border-gray-800 shadow-[0_0_40px_rgba(0,0,0,0.4)]">
-            <img
-              src={pageImage}
-              alt={page.title}
-              className="w-full h-auto object-cover"
-            />
+        {pageImages && pageImages.length > 0 && (
+          <div className="mb-10">
+            {pageImages.length === 1 ? (
+              <div className="rounded-3xl overflow-hidden border border-gray-800 shadow-[0_0_40px_rgba(0,0,0,0.4)]">
+                <img src={pageImages[0]} alt={page.title} className="w-full h-auto object-cover" />
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {pageImages.map((src, i) => (
+                  <div key={i} className="rounded-2xl overflow-hidden border border-gray-800 hover:border-yellow-500/40 transition shadow-[0_0_20px_rgba(0,0,0,0.4)] group">
+                    <img
+                      src={src}
+                      alt={`${page.title} ${i + 1}`}
+                      className="w-full h-72 object-cover object-center group-hover:scale-105 transition duration-500"
+                    />
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         )}
         <p className="text-gray-300 text-lg leading-8 mb-8">{page.body}</p>
