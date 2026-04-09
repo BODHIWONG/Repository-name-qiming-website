@@ -169,10 +169,11 @@ const content = {
         cta: "预约命理咨询",
       },
       fengshui: {
-        title: "风水布局",
-        subtitle: "让空间成为助力，而不是阻力",
-        body: "针对住宅、办公室与商业空间进行专业评估与系统布局，从门位、动线、功能区、气场聚集与能量流动等角度出发，帮助空间与人、事业和目标达成真正匹配。",
-        points: ["住宅风水", "办公室风水", "商业空间布局", "选址与调整建议"],
+        title: "风水布局 · 奇门遁甲应用",
+        subtitle: "以奇门遁甲为核心，为您的空间注入趋吉避凶的智慧力量",
+        body: "风水，是中华文明数千年积累的空间智慧；奇门遁甲，则是古代帝王将相运筹帷幄的时空战略之学。启明大师作为奇门遁甲的正统传人，将这两门顶级学问深度融合，形成了一套独特而精准的风水布局体系。\n\n传统风水注重山向水法、气口动线，而启明大师的布局体系在此基础上，进一步引入奇门遁甲的时空维度——通过排盘起局，精准判断当前时空格局中的旺气方位、吉门所在，结合命主八字、入宅时间与空间结构，制定真正因人、因时、因地制宜的个性化方案。同一套房子，在不同的时间节点布局，效果可能截然不同；而经过奇门遁甲校准的布局，则能最大化地激活空间的正向能量，帮助居住者或经营者趋吉避凶、旺财旺运。",
+        body2: "启明大师在过去16年+的实战中，已为数百位客户完成住宅、办公室与商业空间的风水布局。每一次勘测，他都亲赴现场，手持罗盘，结合奇门遁甲盘局，对空间的每一个关键节点进行精准分析：大门朝向是否纳气、财位是否激活、煞气是否化解、动线是否顺畅。布局完成后，客户普遍反馈事业运势明显改善、家庭关系更加和谐、财富积累速度加快。这不是玄学，而是经过千年验证、由正统传人精准运用的时空科学。",
+        points: ["住宅风水 · 奇门遁甲精准布局", "办公室 / 商业空间旺气激活", "吉方财位精准定位", "煞气化解与能量调整", "入宅 / 开业择吉日", "选址评估与改造建议"],
         cta: "预约风水勘测",
       },
       strategy: {
@@ -344,10 +345,11 @@ const content = {
         cta: "Book Destiny Consultation",
       },
       fengshui: {
-        title: "Feng Shui Layout",
-        subtitle: "Turn your space into an advantage.",
-        body: "We provide professional assessment and systematic layout recommendations for homes, offices, and commercial spaces. We evaluate entrance position, circulation, functional zones, energy concentration, and spatial alignment with people and goals.",
-        points: ["Residential Feng Shui", "Office Feng Shui", "Commercial layout", "Site selection and adjustment advice"],
+        title: "Feng Shui Layout · Qi Men Dun Jia",
+        subtitle: "Powered by Qi Men Dun Jia — turning your space into a precision instrument for auspicious living.",
+        body: "Feng Shui is the accumulated spatial wisdom of Chinese civilization; Qi Men Dun Jia is the time-space strategy used by ancient emperors and generals to gain decisive advantage. Master Qiming, as a lineage holder of Qi Men Dun Jia, has deeply integrated these two disciplines into a unique and highly precise Feng Shui layout system.\n\nConventional Feng Shui focuses on mountain-water principles and energy flow. Master Qiming's system goes further by incorporating the time dimension of Qi Men Dun Jia — through chart construction, he precisely identifies the current auspicious directions, energy concentrations, and optimal entry timing for any given space. Combined with the resident's BaZi and the spatial structure, this produces a truly personalized layout calibrated to the person, the moment, and the place. The same home, laid out at different timing windows, can produce dramatically different results. A Qi Men Dun Jia-calibrated layout maximizes the positive energy of the space, helping residents and business owners to attract good fortune and deflect negative influences.",
+        body2: "Over 16+ years of practice, Master Qiming has completed Feng Shui layouts for hundreds of clients across residential, office, and commercial spaces. Every assessment is conducted on-site, compass in hand, with a Qi Men Dun Jia chart constructed for that specific moment — analyzing every critical point: whether the main entrance captures energy, whether the wealth position is activated, whether negative influences are neutralized, and whether the circulation flow is harmonious. Clients consistently report improved business momentum, more harmonious family relationships, and accelerated wealth accumulation after the layout. This is not superstition — it is a time-space science verified over millennia, applied with precision by a true lineage holder.",
+        points: ["Residential Feng Shui · Qi Men precision layout", "Office / commercial space energy activation", "Precise wealth position identification", "Negative energy neutralization", "Auspicious date selection for move-in or launch", "Site evaluation and renovation guidance"],
         cta: "Book Feng Shui Assessment",
       },
       strategy: {
@@ -1459,7 +1461,11 @@ function ServicePage({ lang, setLang, pageKey }) {
         </div>
         {page.body2 && (
           <div className="bg-gray-900/60 border border-yellow-500/20 rounded-2xl p-6 mb-8">
-            <h3 className="text-yellow-400 font-semibold text-lg mb-3">{lang === 'zh' ? '奇门遁甲与风水布局的深度融合' : 'Qi Men Dun Jia in Feng Shui Layout'}</h3>
+            <h3 className="text-yellow-400 font-semibold text-lg mb-3">
+              {pageKey === 'fengshui'
+                ? (lang === 'zh' ? '启明大师实战案例与客户反馈' : 'Master Qiming in Practice')
+                : (lang === 'zh' ? '奇门遁甲与风水布局的深度融合' : 'Qi Men Dun Jia in Feng Shui Layout')}
+            </h3>
             <p className="text-gray-300 leading-8">{page.body2}</p>
           </div>
         )}
