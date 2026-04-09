@@ -87,8 +87,8 @@ const content = {
       { src: "/case_award.jpeg", alt: "启明大师与客户分享", objectPosition: "top" },
       { src: "/case_lecture.jpeg", alt: "风水讲座现场", objectPosition: "top" },
       { src: "/case_consultation.jpeg", alt: "现场勘察与咨询", objectPosition: "top" },
-      { src: "/case_onsite.jpeg", alt: "现场勘测服务", objectPosition: "top" },
-      { src: "/fengshui-onsite-3.jpg", alt: "客户家居现场勘察", objectPosition: "top" },
+      { src: "/case_onsite.jpeg", alt: "现场勘测服务", objectPosition: "center", portrait: true },
+      { src: "/fengshui-onsite-3.jpg", alt: "客户家居现场勘察", objectPosition: "center", portrait: true },
       { src: "/case_villa.jpeg", alt: "别墅风水布局" },
     ],
     partnerTitle: "合作品牌",
@@ -264,8 +264,8 @@ const content = {
       { src: "/case_award.jpeg", alt: "Master Qiming with Client", objectPosition: "top" },
       { src: "/case_lecture.jpeg", alt: "Feng Shui Lecture", objectPosition: "top" },
       { src: "/case_consultation.jpeg", alt: "On-site Consultation", objectPosition: "top" },
-      { src: "/case_onsite.jpeg", alt: "On-site Assessment", objectPosition: "top" },
-      { src: "/fengshui-onsite-3.jpg", alt: "Residential Site Visit", objectPosition: "top" },
+      { src: "/case_onsite.jpeg", alt: "On-site Assessment", objectPosition: "center", portrait: true },
+      { src: "/fengshui-onsite-3.jpg", alt: "Residential Site Visit", objectPosition: "center", portrait: true },
       { src: "/case_villa.jpeg", alt: "Villa Feng Shui Layout" },
     ],
     partnerTitle: "Partner Brand",
@@ -615,8 +615,12 @@ function Layout({ lang, setLang, children }) {
       <footer className="border-t border-gray-800 bg-gray-950 mt-10 relative z-10">
         <div className="max-w-7xl mx-auto px-6 md:px-8 py-12 grid md:grid-cols-3 gap-8">
           <div>
-            <div className="text-xl font-bold text-yellow-400 mb-3 flex items-center gap-2">
-              <span>✦</span> {t.brandShort}
+            <div className="flex items-center gap-3 mb-4">
+              <img src="/logo-qiming.jpg" alt="Qiming Prosperity Feng Shui" className="w-16 h-16 rounded-full object-cover border-2 border-yellow-500/50 shadow-lg shadow-yellow-500/10" />
+              <div>
+                <div className="text-base font-bold text-yellow-400 leading-tight">{t.brandShort}</div>
+                <div className="text-xs text-gray-500 mt-0.5">Qiming Prosperity Feng Shui</div>
+              </div>
             </div>
             <p className="text-gray-400 text-sm leading-7">{t.aboutText}</p>
           </div>
@@ -812,15 +816,15 @@ function GallerySection({ lang }) {
   return (
     <section className="px-6 md:px-8 py-16 md:py-20 max-w-7xl mx-auto">
       <SectionTitle title={t.galleryTitle} />
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 items-start">
         {t.galleryImages.map((img, i) => (
-          <div key={i} className="aspect-video rounded-2xl overflow-hidden border border-gray-800 hover:border-yellow-500/30 transition group">
+          <div key={i} className={`${img.portrait ? 'aspect-[3/4]' : 'aspect-video'} rounded-2xl overflow-hidden border border-gray-800 hover:border-yellow-500/30 transition group`}>
             <SafeImage
               src={img.src}
               alt={img.alt}
-              className={`w-full h-full object-cover group-hover:scale-105 transition duration-500 ${img.objectPosition === 'top' ? 'object-top' : 'object-center'}`}
+              className={`w-full h-full object-cover group-hover:scale-105 transition duration-500 object-${img.objectPosition || 'center'}`}
               width="400"
-              height="225"
+              height={img.portrait ? '533' : '225'}
             />
           </div>
         ))}
