@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
 
 const WHATSAPP_NUMBER = "6589418791";
@@ -17,6 +17,7 @@ const content = {
       strategy: "战略规划",
       qimen: "占卦问事",
       enhancer: "吉祥物 / 水晶",
+      purification: "空间磁场净化",
     },
     addressLabel: "地址",
     address: "Blk 210 New Upper Changi Road #01-729 Singapore 460210",
@@ -47,6 +48,7 @@ const content = {
       { title: "占卦问事", icon: "🔮", desc: "针对项目、合作、投资、出行、谈判等具体问题，快速判断时机与风险。", path: "/qimen" },
       { title: "吉祥物 / 水晶配置", icon: "💎", desc: "结合命理与空间需求，匹配适合的吉祥物、水晶与能量物件。", path: "/enhancer" },
       { title: "到店 / 上门服务", icon: "📍", desc: "支持预约到店深聊，也可针对空间进行实地评估与布局建议。", path: "/fengshui" },
+      { title: "空间磁场净化", icon: "✨", desc: "空间能量净化、个人磁场调整与解降头，16年修行成果，已帮助众多客户重建正向能量场。", path: "/purification" },
     ],
     casesTitle: "真实案例",
     casesSubtitle: "每一个数字背后，都是真实的决策与改变",
@@ -147,8 +149,8 @@ const content = {
     qrText: "可通过 WhatsApp 直接咨询与预约，扫码即达。",
     aboutTitle: "关于奇明",
     aboutText: "奇明旺财风水专注于命理咨询、风水布局、战略规划、占卦问事，以及吉祥物与水晶能量配置。我们强调环境、时间与人的匹配关系，帮助客户在关键节点做出更有胜算的选择。",
-    footerNav: ["首页", "命理咨询", "风水布局", "战略规划", "占卦问事"],
-    footerNavPaths: ["/", "/destiny", "/fengshui", "/strategy", "/qimen"],
+    footerNav: ["首页", "命理咨询", "风水布局", "战略规划", "占卦问事", "空间磁场净化"],
+    footerNavPaths: ["/", "/destiny", "/fengshui", "/strategy", "/qimen", "/purification"],
     footerHours: "营业时间：周一至周六 10:00 – 19:00",
     footer: "© 2025 奇明旺财风水 · WhatsApp: +65 89418791",
     pageTrustTitle: "为什么客户会选择奇明旺财风水？",
@@ -189,9 +191,16 @@ const content = {
       enhancer: {
         title: "吉祥物 / 水晶配置",
         subtitle: "放大布局后的能量效果",
-        body: "根据命理与风水需求，配置适合的风水吉祥物、水晶手链与能量物件，帮助巩固整体布局效果，使空间与个人气场更加稳定与协调。",
+        body: "根据命理与风水需求，配置适合的风水吉祥物、水晶手链与能量物件，帮助巳固整体布局效果，使空间与个人气场更加稳定与协调。",
         points: ["风水吉祥物推荐", "水晶手链配置", "能量物件摆放建议", "个性化匹配方案"],
-        cta: "咨询能量配置",
+        cta: "和询能量配置",
+      },
+      purification: {
+        title: "空间磁场净化",
+        subtitle: "清除负能量，开启正向生命场域",
+        body: "空间磁场净化是奇明旺财风水的核心业务之一，是启明大帇16年+修行成果与个人天赋的体现。过去四五年间，这项服务已帮助新加坡众多客户重建和谐、清晰与正向能量场。无论是家居、办公室还是商业场所，能量净化都能帮助您清除负面磁场、恢复空间活力与和谐。启明大师以正心正念正行正能量为宗旨，以真才实学利益社会利益大众。",
+        points: ["空间能量净化", "个人磁场调整", "解降头与化转属", "正心正念能量引导"],
+        cta: "预约磁场净化和询",
       },
     },
   },
@@ -206,6 +215,7 @@ const content = {
       strategy: "Strategy",
       qimen: "Qimen",
       enhancer: "Enhancers",
+      purification: "Space Purification",
     },
     addressLabel: "Address",
     address: "Blk 210 New Upper Changi Road #01-729 Singapore 460210",
@@ -236,6 +246,7 @@ const content = {
       { title: "Qimen Divination", icon: "🔮", desc: "Fast judgment for projects, timing, cooperation, investment, negotiation, and travel.", path: "/qimen" },
       { title: "Enhancers / Crystals", icon: "💎", desc: "Matched according to destiny and space needs to strengthen the overall Feng Shui outcome.", path: "/enhancer" },
       { title: "Shop Visit / On-site", icon: "📍", desc: "Available for in-person consultation and practical site evaluation by appointment.", path: "/fengshui" },
+      { title: "Space Purification", icon: "✨", desc: "Space energy clearing, personal aura adjustment, and spiritual protection. 16+ years of practice, helping hundreds restore positive energy fields.", path: "/purification" },
     ],
     casesTitle: "Case Studies",
     casesSubtitle: "Every number represents a real decision and transformation",
@@ -311,8 +322,8 @@ const content = {
     qrText: "Scan the QR code to connect instantly on WhatsApp.",
     aboutTitle: "About Qiming",
     aboutText: "Qiming Prosperity Feng Shui focuses on destiny consultation, Feng Shui layout, strategic planning, Qimen divination, and enhancer or crystal configuration. We emphasize the alignment of environment, timing, and people so clients can make stronger decisions at key moments.",
-    footerNav: ["Home", "Destiny", "Feng Shui", "Strategy", "Qimen"],
-    footerNavPaths: ["/", "/destiny", "/fengshui", "/strategy", "/qimen"],
+    footerNav: ["Home", "Destiny", "Feng Shui", "Strategy", "Qimen", "Space Purification"],
+    footerNavPaths: ["/", "/destiny", "/fengshui", "/strategy", "/qimen", "/purification"],
     footerHours: "Mon – Sat: 10:00 AM – 7:00 PM",
     footer: "© 2025 Qiming Prosperity Feng Shui · WhatsApp: +65 89418791",
     pageTrustTitle: "Why clients choose Qiming Prosperity Feng Shui",
@@ -356,6 +367,13 @@ const content = {
         body: "Based on destiny needs and Feng Shui goals, we recommend suitable enhancers, crystal bracelets, and energy objects to stabilize and strengthen the overall effect of your layout and timing work.",
         points: ["Enhancer recommendations", "Crystal bracelet matching", "Placement guidance", "Personalized configuration"],
         cta: "Consult Energy Configuration",
+      },
+      purification: {
+        title: "Space & Aura Purification",
+        subtitle: "Clear the field. Restore positive energy.",
+        body: "Space & Aura Purification is one of Master Qiming's core services and a reflection of his 16+ years of spiritual practice and innate gift. Over the past four to five years, this service has helped hundreds of clients in Singapore restore harmony, clarity, and positive energy in their lives and spaces. Whether your home, office, or business feels heavy, stagnant, or spiritually compromised, Master Qiming's purification work can help you reset and rebuild.",
+        points: ["Space energy clearing", "Personal aura & magnetic field adjustment", "Spiritual protection & curse removal", "Positive mindset & energy alignment"],
+        cta: "Book Space Purification",
       },
     },
   },
@@ -486,6 +504,7 @@ function Layout({ lang, setLang, children }) {
     { label: t.nav.strategy, to: "/strategy" },
     { label: t.nav.qimen, to: "/qimen" },
     { label: t.nav.enhancer, to: "/enhancer" },
+    { label: t.nav.purification, to: "/purification" },
   ];
 
   return (
@@ -1033,6 +1052,353 @@ function Home({ lang, setLang }) {
   );
 }
 
+// ─── Purification Page ──────────────────────────────────────────────────────────
+function PurificationPage({ lang, setLang }) {
+  const t = content[lang];
+  const page = t.pages.purification;
+  const isZh = lang === "zh";
+
+  const services = isZh ? [
+    {
+      icon: "🌀",
+      title: "空间能量净化",
+      desc: "针对住宅、办公室、商业场所进行全面的能量场扫描与净化。清除历史残留的负面能量、戾气与不良磁场，恢复空间的清净、和谐与正向流动。适合新居入住前、经营不顺时、家庭关系紧张时进行。",
+    },
+    {
+      icon: "⚡",
+      title: "个人磁场调整",
+      desc: "针对个人气场混乱、运势低迷、情绪压抑、身体疲惫等状况，进行个人磁场的深度调整与能量重建。帮助您恢复内在清明、提升正向吸引力，让生命重新焕发活力。",
+    },
+    {
+      icon: "🛡️",
+      title: "解降头 · 化转属",
+      desc: "针对遭受降头、邪术、符咒等负面能量侵扰的客户，启明大师凭借16年+的修行功力与天赋，进行专业的解除与化转。这是启明大师最具代表性的核心能力之一，已成功帮助众多客户摆脱困境。",
+    },
+    {
+      icon: "✨",
+      title: "正心正念能量引导",
+      desc: "以正心正念正行正能量为宗旨，启明大师不仅净化外在空间与磁场，更引导客户建立内在的正向思维模式与能量状态。真正的净化，从心开始，由内而外，全面提升生命质量。",
+    },
+  ] : [
+    {
+      icon: "🌀",
+      title: "Space Energy Clearing",
+      desc: "A comprehensive energy scan and purification of your home, office, or commercial space. Clears residual negative energy, stagnant qi, and harmful fields — restoring clarity, harmony, and positive flow. Ideal before moving in, during business difficulties, or when relationships feel strained.",
+    },
+    {
+      icon: "⚡",
+      title: "Personal Aura & Magnetic Field Adjustment",
+      desc: "For those experiencing scattered energy, low fortune, emotional suppression, or persistent fatigue — Master Qiming performs deep aura recalibration and energy rebuilding. Restore inner clarity, elevate your positive attraction, and reignite your life force.",
+    },
+    {
+      icon: "🛡️",
+      title: "Spiritual Protection & Curse Removal",
+      desc: "For clients affected by black magic, curses, spiritual attacks, or dark energy interference, Master Qiming applies 16+ years of cultivation and innate spiritual gifts to professionally remove and neutralise these influences. This is one of his most distinctive core capabilities, with a strong track record of helping clients break free.",
+    },
+    {
+      icon: "✨",
+      title: "Positive Mindset & Energy Alignment",
+      desc: "Guided by the principle of right heart, right thought, right action, and right energy, Master Qiming not only purifies external spaces and fields — he also guides clients toward building an inner foundation of positive thinking and energy. True purification begins within, radiating outward to elevate every dimension of life.",
+    },
+  ];
+
+  const masterCredentials = isZh ? [
+    "奇门遁甲正统传人 · 16年+实战经验",
+    "清华大学积极心理学指导师",
+    "武当山正统风水传承",
+    "以利人利己为宗旨",
+    "正心正念正行正能量",
+    "真才实学利益社会利益大众",
+  ] : [
+    "Qimen Dunjia Lineage Holder · 16+ Years Practice",
+    "Positive Psychology Instructor · Tsinghua University",
+    "Wudang Mountain Feng Shui Lineage",
+    "Guided by the principle of mutual benefit",
+    "Right heart, right thought, right action, right energy",
+    "Genuine expertise in service of society and the people",
+  ];
+
+  const testimonials = isZh ? [
+    { name: "家庭客户 · 新加坡", stars: 5, quote: "启明大师的空间净化真的很神奇，净化后家里的氛围完全不同了，家人之间的关系也明显改善，感觉整个空间都轻盈了。" },
+    { name: "企业主 · 商业空间", stars: 5, quote: "办公室净化后，团队状态明显好转，业绩也开始回升。启明大师不只是净化空间，更帮助我们重新找到了方向。" },
+    { name: "个人客户 · 磁场调整", stars: 5, quote: "经过个人磁场调整后，感觉整个人都清醒了，之前那种莫名的压抑和疲惫感消失了，生活开始顺畅起来。" },
+    { name: "客户 · 解降头服务", stars: 5, quote: "启明大师的功力让我非常信服，经过他的处理，困扰我多年的问题终于得到了解决，非常感恩。" },
+  ] : [
+    { name: "Residential Client · Singapore", stars: 5, quote: "Master Qiming's space purification was truly remarkable. After the clearing, the atmosphere at home completely transformed — family relationships improved noticeably and the whole space felt lighter." },
+    { name: "Business Owner · Commercial Space", stars: 5, quote: "After the office purification, our team's energy improved significantly and business started picking up again. Master Qiming didn't just clear the space — he helped us rediscover our direction." },
+    { name: "Personal Client · Aura Adjustment", stars: 5, quote: "After the personal magnetic field adjustment, I felt completely clear-headed. The unexplained heaviness and fatigue I had been carrying disappeared, and life started flowing smoothly again." },
+    { name: "Client · Spiritual Protection Service", stars: 5, quote: "Master Qiming's ability truly impressed me. After his work, a problem that had troubled me for years was finally resolved. I am deeply grateful." },
+  ];
+
+  const faqs = isZh ? [
+    { q: "什么情况下需要空间磁场净化？", a: "当您感觉家居或办公室氛围沉重、运势持续低迷、家庭关系紧张、事业屡遭阻碍、或有莫名的不安感时，都可以考虑进行空间磁场净化。新居入住前、装修后或经历重大变故后也建议进行净化。" },
+    { q: "解降头是什么？需要我做什么准备？", a: "解降头是针对遭受降头、符咒或邪术侵扰的专业处理服务。您只需提供基本信息并预约咨询，启明大师会根据您的具体情况制定处理方案。整个过程安全、专业、保密。" },
+    { q: "净化服务可以远程进行吗？", a: "可以。启明大师可以通过远程方式进行部分净化工作，但针对空间的全面净化建议到场进行效果更佳。个人磁场调整可以通过视频或WhatsApp远程进行。" },
+    { q: "净化后效果能持续多久？", a: "净化效果因个人情况和空间状态而异。一般情况下，配合正确的风水布局和个人能量维护，效果可以持续较长时间。启明大师会根据您的情况给出具体建议。" },
+  ] : [
+    { q: "When do I need space purification?", a: "Consider space purification when your home or office feels heavy or oppressive, when fortune has been persistently low, when family relationships are strained, when business faces repeated obstacles, or when there is an unexplained sense of unease. It is also recommended before moving into a new space, after renovation, or following a major life event." },
+    { q: "What is curse removal and what do I need to prepare?", a: "Curse removal is a professional service for those affected by black magic, spiritual curses, or dark energy interference. You simply need to provide basic information and book a consultation. Master Qiming will design a tailored approach based on your specific situation. The entire process is safe, professional, and confidential." },
+    { q: "Can purification be done remotely?", a: "Yes. Master Qiming can perform certain purification work remotely, though for comprehensive space clearing, an in-person visit yields the best results. Personal aura and magnetic field adjustments can be conducted via video call or WhatsApp." },
+    { q: "How long do the effects of purification last?", a: "The duration of effects varies by individual circumstance and spatial condition. In general, when combined with proper Feng Shui layout and personal energy maintenance, the effects can be sustained for a significant period. Master Qiming will provide specific guidance based on your situation." },
+  ];
+
+  const [openFaq, setOpenFaq] = useState(null);
+
+  return (
+    <Layout lang={lang} setLang={setLang}>
+      {/* Hero Section */}
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img src="/purification-hero.jpg" alt="Space Purification" className="w-full h-full object-cover opacity-30" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black" />
+        </div>
+        <div className="relative z-10 px-6 md:px-8 py-20 md:py-32 max-w-6xl mx-auto">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-yellow-500/30 bg-yellow-500/10 text-yellow-400 text-sm mb-6">
+            <span>✨</span>
+            <span>{isZh ? "奇明旺财风水 · 核心业务" : "Qiming Prosperity Feng Shui · Core Service"}</span>
+          </div>
+          <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
+            {isZh ? "空间磁场净化" : "Space & Aura Purification"}
+          </h1>
+          <p className="text-xl md:text-2xl text-yellow-400 mb-6 font-medium">
+            {isZh ? "清除负能量，开启正向生命场域" : "Clear the field. Restore positive energy."}
+          </p>
+          <p className="max-w-3xl text-gray-300 text-base md:text-lg leading-8 mb-10">
+            {isZh
+              ? "这是启明大师16年+修行成果与个人天赋的结晶。过去四五年间，已帮助新加坡众多客户重建和谐、清晰与正向能量场，影响着越来越多的客户和朋友。"
+              : "A reflection of Master Qiming's 16+ years of spiritual cultivation and innate gift. Over the past four to five years, this service has helped hundreds of clients in Singapore restore harmony, clarity, and positive energy — touching the lives of an ever-growing circle of clients and friends."}
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <a
+              href={buildWhatsAppUrl(isZh ? "你好，我想预约空间磁场净化服务。" : "Hello, I would like to book a Space Purification consultation.")}
+              className="inline-block bg-yellow-500 text-black px-8 py-4 rounded-2xl text-lg font-semibold shadow-[0_0_30px_rgba(234,179,8,0.4)] hover:bg-yellow-400 hover:shadow-[0_0_40px_rgba(234,179,8,0.6)] transition"
+              onClick={() => trackConversion('whatsapp_click', 'purification_hero_cta')}
+            >
+              {isZh ? "立即 WhatsApp 咨询" : "WhatsApp Consultation"}
+            </a>
+            <a
+              href="#purification-services"
+              className="inline-block border border-gray-600 text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-gray-900 hover:border-yellow-500/40 transition"
+            >
+              {isZh ? "了解服务详情" : "Explore Services"}
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Bar */}
+      <section className="px-6 md:px-8 py-8 bg-gray-950 border-y border-gray-800">
+        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
+          {(isZh ? [
+            { value: "16年+", label: "修行经验" },
+            { value: "4-5年", label: "专项服务历史" },
+            { value: "众多", label: "成功案例" },
+            { value: "100%", label: "保密处理" },
+          ] : [
+            { value: "16+", label: "Years of Practice" },
+            { value: "4-5", label: "Years of Service" },
+            { value: "Hundreds", label: "Successful Cases" },
+            { value: "100%", label: "Confidential" },
+          ]).map((stat) => (
+            <div key={stat.label} className="text-center">
+              <div className="text-3xl font-bold text-yellow-400 mb-1">{stat.value}</div>
+              <div className="text-sm text-gray-400">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section id="purification-services" className="px-6 md:px-8 py-16 md:py-24 max-w-7xl mx-auto">
+        <div className="text-center mb-14">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            {isZh ? "四大核心净化服务" : "Four Core Purification Services"}
+          </h2>
+          <p className="text-gray-300 max-w-3xl mx-auto leading-8">
+            {isZh
+              ? "每一项服务都源自启明大师多年修行的积累与天赋，针对不同的能量问题提供精准的解决方案。"
+              : "Each service draws from Master Qiming's years of cultivation and innate gifts, offering precise solutions for different energy challenges."}
+          </p>
+        </div>
+        <div className="grid md:grid-cols-2 gap-8">
+          {services.map((service, i) => (
+            <div key={i} className="group bg-gray-900/80 border border-gray-800 hover:border-yellow-500/50 rounded-3xl p-8 transition hover:-translate-y-1 hover:shadow-[0_8px_40px_rgba(234,179,8,0.15)] backdrop-blur-sm">
+              <div className="text-4xl mb-5">{service.icon}</div>
+              <h3 className="text-xl font-bold mb-4 group-hover:text-yellow-400 transition">{service.title}</h3>
+              <p className="text-gray-300 leading-8">{service.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Master Section */}
+      <section className="px-6 md:px-8 py-16 md:py-24 bg-gray-950">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              {isZh ? "启明大师 · 修行与资历" : "Master Qiming · Cultivation & Credentials"}
+            </h2>
+            <p className="text-yellow-400 font-medium">
+              {isZh ? "奇门遁甲传人 · 清华大学积极心理学指导师 · 16年+实战经验" : "Qimen Dunjia Lineage · Tsinghua Positive Psychology Instructor · 16+ Years"}
+            </p>
+          </div>
+          <div className="grid lg:grid-cols-2 gap-10 items-start">
+            <div className="space-y-6">
+              <div className="bg-gray-900 border border-yellow-500/20 rounded-3xl overflow-hidden shadow-[0_0_60px_rgba(234,179,8,0.15)]">
+                <SafeImage
+                  src="/master-main.jpg"
+                  alt="Master Huang Qiming"
+                  className="w-full h-auto block"
+                  width="830"
+                  height="1046"
+                />
+              </div>
+            </div>
+            <div className="space-y-6">
+              <div className="bg-gray-900 border border-gray-800 rounded-3xl p-8">
+                <p className="text-gray-300 leading-9 text-base">
+                  {isZh
+                    ? "启明大师是奇门遁甲的正统传人，在风水行业已有16年+的实战经验。他同时是清华大学积极心理学指导师，将东方玄学智慧与现代心理学相融合，形成了独特的能量净化体系。"
+                    : "Master Qiming is a lineage holder of Qimen Dunjia with over 16 years of real-world practice in the Feng Shui industry. He is also a certified Positive Psychology Instructor from Tsinghua University, blending Eastern metaphysical wisdom with modern psychology to form a unique energy purification system."}
+                </p>
+                <p className="text-gray-300 leading-9 text-base mt-4">
+                  {isZh
+                    ? "以利人利己为宗旨，以真才实学利益社会利益大众。他的正心正念正行正能量，影响着越来越多的客户和朋友，成为他们生命中的一盏明灯。"
+                    : "Guided by the principle of mutual benefit, and committed to serving society with genuine expertise. His right heart, right thought, right action, and right energy have become a guiding light for an ever-growing circle of clients and friends."}
+                </p>
+              </div>
+              <div className="bg-gray-900 border border-yellow-500/20 rounded-3xl p-8">
+                <h3 className="text-lg font-semibold mb-5 text-yellow-400">
+                  {isZh ? "专业资历与认证" : "Professional Credentials"}
+                </h3>
+                <div className="space-y-3">
+                  {masterCredentials.map((item) => (
+                    <p key={item} className="flex items-center gap-3 text-gray-300">
+                      <span className="text-yellow-400 text-lg shrink-0">✦</span>
+                      <span>{item}</span>
+                    </p>
+                  ))}
+                </div>
+              </div>
+              <div className="bg-gradient-to-r from-yellow-500/10 via-yellow-600/5 to-yellow-500/10 border border-yellow-500/30 rounded-3xl p-8">
+                <p className="text-yellow-300 text-lg font-semibold mb-3">
+                  {isZh ? "启明大师的使命" : "Master Qiming's Mission"}
+                </p>
+                <p className="text-gray-300 leading-8">
+                  {isZh
+                    ? "犹如一盏前行的灯，用光去照亮生活的美。启明，以风水之妙，成就您的生活之美。"
+                    : "Like a lamp lighting the way forward — using light to illuminate the beauty of life. Qiming, with the art of Feng Shui, helps you create a life of beauty and purpose."}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Visual Section */}
+      <section className="px-6 md:px-8 py-16 md:py-24 max-w-7xl mx-auto">
+        <div className="text-center mb-14">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            {isZh ? "净化服务现场" : "Purification in Practice"}
+          </h2>
+        </div>
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="rounded-3xl overflow-hidden border border-gray-800 hover:border-yellow-500/30 transition group">
+            <img
+              src="/purification-space.jpg"
+              alt={isZh ? "净化工具与仪式" : "Purification tools and ritual"}
+              className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+            />
+          </div>
+          <div className="rounded-3xl overflow-hidden border border-gray-800 hover:border-yellow-500/30 transition group">
+            <img
+              src="/purification-energy.jpg"
+              alt={isZh ? "个人磁场能量" : "Personal aura energy"}
+              className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="px-6 md:px-8 py-16 md:py-24 bg-gray-950">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              {isZh ? "客户真实反馈" : "Client Testimonials"}
+            </h2>
+            <p className="text-gray-300 max-w-2xl mx-auto leading-8">
+              {isZh
+                ? "每一个改变，都是真实发生的。这些是客户在接受净化服务后的真实感受。"
+                : "Every transformation is real. These are genuine reflections from clients who have experienced the purification service."}
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {testimonials.map((item, i) => (
+              <div key={i} className="bg-gray-900/80 border border-gray-800 rounded-2xl p-6 shadow-lg hover:border-yellow-500/30 transition backdrop-blur-sm">
+                <StarRating count={item.stars} />
+                <p className="text-gray-300 leading-7 text-sm mb-4">"{item.quote}"</p>
+                <div className="text-yellow-400 text-sm font-medium">— {item.name}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="px-6 md:px-8 py-16 md:py-24 max-w-4xl mx-auto">
+        <div className="text-center mb-14">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            {isZh ? "常见问题" : "Frequently Asked Questions"}
+          </h2>
+        </div>
+        <div className="space-y-3">
+          {faqs.map((faq, i) => (
+            <div key={i} className="bg-gray-900/80 border border-gray-800 rounded-2xl overflow-hidden hover:border-yellow-500/30 transition backdrop-blur-sm">
+              <button
+                className="w-full text-left px-6 py-5 flex items-center justify-between gap-4"
+                onClick={() => setOpenFaq(openFaq === i ? null : i)}
+              >
+                <span className="font-semibold text-white">{faq.q}</span>
+                <span className={`text-yellow-400 text-xl transition-transform shrink-0 ${openFaq === i ? "rotate-45" : ""}`}>+</span>
+              </button>
+              {openFaq === i && (
+                <div className="px-6 pb-5">
+                  <p className="text-gray-300 leading-7 text-sm">{faq.a}</p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="px-6 md:px-8 py-16 md:py-24 max-w-5xl mx-auto">
+        <div className="bg-gradient-to-r from-yellow-500/10 via-yellow-600/5 to-yellow-500/10 border border-yellow-500/30 rounded-3xl p-10 md:p-16 text-center">
+          <div className="text-yellow-400 font-semibold text-xl mb-4">
+            {isZh ? "⚡ 净化名额有限，建议尽早预约" : "⚡ Limited Purification Slots — Book Early"}
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            {isZh ? "准备好开启正向能量了吗？" : "Ready to restore your energy field?"}
+          </h2>
+          <p className="text-gray-300 leading-8 mb-10 max-w-2xl mx-auto">
+            {isZh
+              ? "无论您面临的是空间问题、个人磁场困扰还是需要解降头，启明大师都能为您提供专业、保密、有效的解决方案。"
+              : "Whether you face spatial issues, personal aura disturbances, or need spiritual protection — Master Qiming offers professional, confidential, and effective solutions tailored to your needs."}
+          </p>
+          <a
+            href={buildWhatsAppUrl(isZh ? "你好，我想预约空间磁场净化服务，请问如何安排？" : "Hello, I would like to book a Space Purification session. How do I proceed?")}
+            className="inline-block bg-yellow-500 text-black px-10 py-5 rounded-2xl text-xl font-bold shadow-[0_0_40px_rgba(234,179,8,0.4)] hover:bg-yellow-400 hover:shadow-[0_0_60px_rgba(234,179,8,0.6)] transition"
+            onClick={() => trackConversion('whatsapp_click', 'purification_final_cta')}
+          >
+            {isZh ? "立即 WhatsApp 预约" : "Book via WhatsApp Now"}
+          </a>
+        </div>
+      </section>
+    </Layout>
+  );
+}
+
 // ─── Service Page ─────────────────────────────────────────────────────────────
 function ServicePage({ lang, setLang, pageKey }) {
   const t = content[lang];
@@ -1082,6 +1448,7 @@ function AppRoutes({ lang, setLang }) {
       <Route path="/strategy" element={<ServicePage lang={lang} setLang={setLang} pageKey="strategy" />} />
       <Route path="/qimen" element={<ServicePage lang={lang} setLang={setLang} pageKey="qimen" />} />
       <Route path="/enhancer" element={<ServicePage lang={lang} setLang={setLang} pageKey="enhancer" />} />
+      <Route path="/purification" element={<PurificationPage lang={lang} setLang={setLang} />} />
     </Routes>
   );
 }
