@@ -85,7 +85,7 @@ const content = {
     galleryTitle: "服务现场",
     galleryImages: [
       { src: "/case_award.jpeg", alt: "启明大师与客户分享", objectPosition: "top" },
-      { src: "/case_lecture.jpeg", alt: "风水讲座现场" },
+      { src: "/case_lecture.jpeg", alt: "风水讲座现场", objectPosition: "top" },
       { src: "/case_consultation.jpeg", alt: "现场勘察与咨询", objectPosition: "top" },
       { src: "/case_onsite.jpeg", alt: "现场勘测服务", objectPosition: "top" },
       { src: "/fengshui-onsite-3.jpg", alt: "客户家居现场勘察", objectPosition: "top" },
@@ -262,7 +262,7 @@ const content = {
     galleryTitle: "Service Gallery",
     galleryImages: [
       { src: "/case_award.jpeg", alt: "Master Qiming with Client", objectPosition: "top" },
-      { src: "/case_lecture.jpeg", alt: "Feng Shui Lecture" },
+      { src: "/case_lecture.jpeg", alt: "Feng Shui Lecture", objectPosition: "top" },
       { src: "/case_consultation.jpeg", alt: "On-site Consultation", objectPosition: "top" },
       { src: "/case_onsite.jpeg", alt: "On-site Assessment", objectPosition: "top" },
       { src: "/fengshui-onsite-3.jpg", alt: "Residential Site Visit", objectPosition: "top" },
@@ -524,9 +524,9 @@ function Layout({ lang, setLang, children }) {
       {/* 导航栏 */}
       <nav className="sticky top-0 z-40 backdrop-blur-md bg-black/90 border-b border-yellow-500/10">
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-8 py-4">
-          <Link to="/" className="text-lg md:text-xl font-bold tracking-wide text-white hover:text-yellow-400 transition flex items-center gap-2">
-            <span className="text-yellow-400">✦</span>
-            {t.brandShort}
+          <Link to="/" className="flex items-center hover:opacity-90 transition-opacity">
+            <img src="/logo-qiming.jpg" alt="Qiming Prosperity Feng Shui" className="h-10 w-10 rounded-full object-cover border border-yellow-500/40" />
+            <span className="ml-2 text-base md:text-lg font-bold tracking-wide text-white hidden sm:block">{t.brandShort}</span>
           </Link>
 
           {/* 桌面端导航 */}
