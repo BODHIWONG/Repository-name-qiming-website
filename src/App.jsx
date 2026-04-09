@@ -1402,19 +1402,33 @@ function PurificationPage({ lang, setLang }) {
 }
 
 // ─── Service Page ─────────────────────────────────────────────────────────────
+const PAGE_IMAGES = {
+  destiny: "/destiny-consultation.jpg",
+};
+
 function ServicePage({ lang, setLang, pageKey }) {
   const t = content[lang];
   const page = t.pages[pageKey];
+  const pageImage = PAGE_IMAGES[pageKey];
   return (
     <Layout lang={lang} setLang={setLang}>
       <section className="px-6 md:px-8 py-16 md:py-20 max-w-5xl mx-auto">
         <p className="text-yellow-400 mb-4 font-medium">{page.subtitle}</p>
         <h1 className="text-4xl md:text-5xl font-bold mb-8">{page.title}</h1>
+        {pageImage && (
+          <div className="mb-10 rounded-3xl overflow-hidden border border-gray-800 shadow-[0_0_40px_rgba(0,0,0,0.4)]">
+            <img
+              src={pageImage}
+              alt={page.title}
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        )}
         <p className="text-gray-300 text-lg leading-8 mb-8">{page.body}</p>
         <div className="grid md:grid-cols-2 gap-4 mb-10">
           {page.points.map((point) => (
             <div key={point} className="bg-gray-900 border border-gray-800 rounded-2xl p-5 text-gray-300 flex items-center gap-3">
-              <span className="text-yellow-400 text-lg">✦</span>
+              <span className="text-yellow-400 text-lg">❆</span>
               <span>{point}</span>
             </div>
           ))}
