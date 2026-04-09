@@ -87,7 +87,7 @@ const content = {
       { src: "/case_award.jpeg", alt: "启明大师获奖" },
       { src: "/case_lecture.jpeg", alt: "风水讲座" },
       { src: "/case_consultation.jpeg", alt: "企业咨询" },
-      { src: "/case_onsite.jpeg", alt: "现场勘测" },
+      { src: "/case_onsite.jpeg", alt: "现场勘测", objectPosition: "top" },
       { src: "/case_residential.jpeg", alt: "住宅风水" },
       { src: "/case_villa.jpeg", alt: "别墅布局" },
     ],
@@ -264,7 +264,7 @@ const content = {
       { src: "/case_award.jpeg", alt: "Master Qiming Award" },
       { src: "/case_lecture.jpeg", alt: "Feng Shui Lecture" },
       { src: "/case_consultation.jpeg", alt: "Corporate Consultation" },
-      { src: "/case_onsite.jpeg", alt: "On-site Assessment" },
+      { src: "/case_onsite.jpeg", alt: "On-site Assessment", objectPosition: "top" },
       { src: "/case_residential.jpeg", alt: "Residential Feng Shui" },
       { src: "/case_villa.jpeg", alt: "Villa Layout" },
     ],
@@ -783,7 +783,7 @@ function CasesSection({ lang }) {
                 <SafeImage
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                  className={`w-full h-full object-cover group-hover:scale-105 transition duration-500 ${item.image === '/case_onsite.jpeg' ? 'object-top' : 'object-center'}`}
                   width="600"
                   height="338"
                 />
@@ -818,7 +818,7 @@ function GallerySection({ lang }) {
             <SafeImage
               src={img.src}
               alt={img.alt}
-              className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              className={`w-full h-full object-cover group-hover:scale-105 transition duration-500 ${img.objectPosition === 'top' ? 'object-top' : 'object-center'}`}
               width="400"
               height="225"
             />
@@ -1050,10 +1050,51 @@ function Home({ lang, setLang }) {
       <GallerySection lang={lang} />
       <PartnerSection lang={lang} />
       <TestimonialsSection lang={lang} />
-      <ProductsSection lang={lang} />
-      <FAQSection lang={lang} />
       <MasterSection lang={lang} />
-      <QRSection lang={lang} />
+    </Layout>
+  );
+}
+
+// ─── Enhancer Page ──────────────────────────────────────────────────────────────
+function EnhancerPage({ lang, setLang }) {
+  const t = content[lang];
+  const page = t.pages.enhancer;
+  return (
+    <Layout lang={lang} setLang={setLang}>
+      <section className="px-6 md:px-8 py-16 md:py-20 max-w-5xl mx-auto">
+        <p className="text-yellow-400 mb-4 font-medium">{page.subtitle}</p>
+        <h1 className="text-4xl md:text-5xl font-bold mb-8">{page.title}</h1>
+        <div className="text-gray-300 text-lg leading-8 mb-8 space-y-4">
+          {page.body.split('\n\n').map((para, i) => (
+            <p key={i}>{para}</p>
+          ))}
+        </div>
+        <div className="grid md:grid-cols-2 gap-4 mb-10">
+          {page.points.map((point) => (
+            <div key={point} className="bg-gray-900 border border-gray-800 rounded-2xl p-5 text-gray-300 flex items-center gap-3">
+              <span className="text-yellow-400 text-lg">❆</span>
+              <span>{point}</span>
+            </div>
+          ))}
+        </div>
+        <div className="bg-gray-900 border border-yellow-500/20 rounded-2xl p-6 mb-10">
+          <h2 className="text-2xl font-semibold mb-4">{t.pageTrustTitle}</h2>
+          <div className="space-y-3 text-gray-300">
+            {t.pageTrusts.map((item) => (
+              <p key={item} className="flex items-center gap-2">
+                <span className="text-yellow-400">✔</span> {item}
+              </p>
+            ))}
+          </div>
+        </div>
+        <a
+          href={buildWhatsAppUrl(lang === "zh" ? `你好，我想咨询${page.title}` : `Hello, I want to book ${page.title}`)}
+          className="inline-block bg-yellow-500 text-black px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-yellow-400 transition shadow-[0_0_30px_rgba(234,179,8,0.2)]"
+        >
+          {page.cta}
+        </a>
+      </section>
+      <ProductsSection lang={lang} />
     </Layout>
   );
 }
@@ -1507,7 +1548,7 @@ function AppRoutes({ lang, setLang }) {
       <Route path="/fengshui" element={<ServicePage lang={lang} setLang={setLang} pageKey="fengshui" />} />
       <Route path="/strategy" element={<ServicePage lang={lang} setLang={setLang} pageKey="strategy" />} />
       <Route path="/qimen" element={<ServicePage lang={lang} setLang={setLang} pageKey="qimen" />} />
-      <Route path="/enhancer" element={<ServicePage lang={lang} setLang={setLang} pageKey="enhancer" />} />
+      <Route path="/enhancer" element={<EnhancerPage lang={lang} setLang={setLang} />} />
       <Route path="/purification" element={<PurificationPage lang={lang} setLang={setLang} />} />
     </Routes>
   );
