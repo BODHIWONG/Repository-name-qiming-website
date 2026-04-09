@@ -1408,6 +1408,11 @@ const PAGE_IMAGES = {
     "/destiny-consultation-2.jpg",
     "/destiny-consultation-3.jpg",
   ],
+  fengshui: [
+    "/fengshui-onsite-1.jpg",
+    "/fengshui-onsite-2.jpg",
+    "/fengshui-onsite-3.jpg",
+  ],
 };
 
 function ServicePage({ lang, setLang, pageKey }) {
