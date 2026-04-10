@@ -152,7 +152,7 @@ const content = {
     aboutText: "奇明旺财风水专注于命理咨询、风水布局、战略规划、占卦问事，以及吉祥物与水晶能量配置。我们强调环境、时间与人的匹配关系，帮助客户在关键节点做出更有胜算的选择。",
     footerNav: ["首页", "命理咨询", "风水布局", "战略规划", "占卦问事", "空间磁场净化"],
     footerNavPaths: ["/", "/destiny", "/fengshui", "/strategy", "/qimen", "/purification"],
-    footerHours: "营业时间：周一至周六 10:00 – 19:00",
+    footerHours: "营业时间：周一至周日 10:00 – 19:00",
     footer: "© 2025 奇明旺财风水 · WhatsApp: +65 89418791",
     pageTrustTitle: "为什么客户会选择奇明旺财风水？",
     pageTrusts: [
@@ -328,7 +328,7 @@ const content = {
     aboutText: "Qiming Prosperity Feng Shui focuses on destiny consultation, Feng Shui layout, strategic planning, Qimen divination, and enhancer or crystal configuration. We emphasize the alignment of environment, timing, and people so clients can make stronger decisions at key moments.",
     footerNav: ["Home", "Destiny", "Feng Shui", "Strategy", "Qimen", "Space Purification"],
     footerNavPaths: ["/", "/destiny", "/fengshui", "/strategy", "/qimen", "/purification"],
-    footerHours: "Mon – Sat: 10:00 AM – 7:00 PM",
+    footerHours: "Mon – Sun: 10:00 AM – 7:00 PM",
     footer: "© 2025 Qiming Prosperity Feng Shui · WhatsApp: +65 89418791",
     pageTrustTitle: "Why clients choose Qiming Prosperity Feng Shui",
     pageTrusts: [
