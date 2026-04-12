@@ -1,7 +1,7 @@
 /*
   DualNeedsSection — 双重刚需解决方案
   Two-column asymmetric layout
-  Left: Career & Wealth (搞钱避险)
+  Left: Career & Wealth (赚钱避险)
   Right: Emotional Healing (情绪疗愈)
 */
 import { motion } from "framer-motion";
@@ -87,7 +87,7 @@ export default function DualNeedsSection() {
               </div>
 
               <h3 className="display-heading text-2xl md:text-3xl mb-3">
-                {t("搞钱与避险刚需", "Career & Wealth Strategy")}
+                {t("赚钱与避险刚需", "Career & Wealth Strategy")}
               </h3>
               <p className="text-sm text-[oklch(0.50_0.02_65)] mb-6 leading-relaxed"
                 style={{ fontFamily: "'Lato', 'Noto Sans SC', sans-serif" }}>
@@ -119,8 +119,8 @@ export default function DualNeedsSection() {
                 <p className="text-sm text-[oklch(0.25_0.02_60)]"
                   style={{ fontFamily: "'Lato', 'Noto Sans SC', sans-serif" }}>
                   {t(
-                    "28-45岁，EP/SP新移民或本地PMEB，具备扎实经济基础，高度看重逻辑分析",
-                    "Age 28-45, EP/SP new immigrants or local PMEBs, strong financial foundation, value logical analysis"
+                    "25-55岁，EP/SP新移民或本地PMEB，具备扎实经济基础，高度看重逻辑分析",
+                    "Age 25-55, EP/SP new immigrants or local PMEBs, strong financial foundation, value logical analysis"
                   )}
                 </p>
               </div>
@@ -185,8 +185,8 @@ export default function DualNeedsSection() {
                 <p className="text-sm text-[oklch(0.25_0.02_60)]"
                   style={{ fontFamily: "'Lato', 'Noto Sans SC', sans-serif" }}>
                   {t(
-                    "25-40岁，单身、离异或深陷情感纠葛的女性群体为主，渴求斩断负面磁场",
-                    "Age 25-40, primarily single, divorced or emotionally entangled women seeking to break negative energy patterns"
+                    "25-55岁，单身、离异或深陷情感纠葛的女性群体为主，渴求斩断负面磁场",
+                    "Age 25-55, primarily single, divorced or emotionally entangled women seeking to break negative energy patterns"
                   )}
                 </p>
               </div>
