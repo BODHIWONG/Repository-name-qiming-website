@@ -1,0 +1,283 @@
+/* 
+  启明风水美学 | Qiming Prosperity Feng Shui
+  Design System: Premium Advisory Firm × Wabi-Sabi Warmth
+  
+  Color Philosophy:
+  - Ivory White (#F8F4EE) — primary background, like warm tea room walls
+  - Deep Brown-Black (#1C1810) — primary text, authoritative and grounded
+  - Matte Gold (#A8843A) — brand accent, like aged brass compass
+  - Sand (#EDE8DF) — card backgrounds, secondary surfaces
+  - Warm Cream (#F2EDE4) — section alternates
+  
+  Typography:
+  - Cormorant Garamond — English display headings (elegant serif)
+  - Noto Serif SC — Chinese headings (classical authority)
+  - Lato — English body text (clean, modern)
+  - Noto Sans SC — Chinese body text (readable)
+*/
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-sand: var(--sand);
+  --color-ivory: var(--ivory);
+}
+
+:root {
+  --radius: 0.25rem;
+  
+  /* Brand Colors */
+  --gold: oklch(0.60 0.08 65);
+  --gold-light: oklch(0.75 0.06 65);
+  --sand: oklch(0.93 0.015 75);
+  --ivory: oklch(0.97 0.012 75);
+  
+  /* Semantic Colors */
+  --background: oklch(0.97 0.012 75);
+  --foreground: oklch(0.15 0.02 60);
+  --card: oklch(0.94 0.014 75);
+  --card-foreground: oklch(0.15 0.02 60);
+  --popover: oklch(0.97 0.012 75);
+  --popover-foreground: oklch(0.15 0.02 60);
+  --primary: oklch(0.60 0.08 65);
+  --primary-foreground: oklch(0.98 0.005 75);
+  --secondary: oklch(0.93 0.015 75);
+  --secondary-foreground: oklch(0.25 0.02 60);
+  --muted: oklch(0.93 0.015 75);
+  --muted-foreground: oklch(0.50 0.02 65);
+  --accent: oklch(0.93 0.015 75);
+  --accent-foreground: oklch(0.15 0.02 60);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.88 0.018 70);
+  --input: oklch(0.88 0.018 70);
+  --ring: oklch(0.60 0.08 65);
+  
+  /* Sidebar */
+  --sidebar: oklch(0.94 0.014 75);
+  --sidebar-foreground: oklch(0.15 0.02 60);
+  --sidebar-primary: oklch(0.60 0.08 65);
+  --sidebar-primary-foreground: oklch(0.98 0.005 75);
+  --sidebar-accent: oklch(0.93 0.015 75);
+  --sidebar-accent-foreground: oklch(0.15 0.02 60);
+  --sidebar-border: oklch(0.88 0.018 70);
+  --sidebar-ring: oklch(0.60 0.08 65);
+  
+  /* Charts */
+  --chart-1: oklch(0.60 0.08 65);
+  --chart-2: oklch(0.70 0.07 70);
+  --chart-3: oklch(0.50 0.06 60);
+  --chart-4: oklch(0.80 0.05 75);
+  --chart-5: oklch(0.40 0.05 55);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Lato', 'Noto Sans SC', sans-serif;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', 'Noto Serif SC', serif;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: 1280px;
+    }
+  }
+
+  /* Gold divider line */
+  .gold-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, oklch(0.60 0.08 65), transparent);
+  }
+  
+  /* Gold accent text */
+  .text-gold {
+    color: oklch(0.60 0.08 65);
+  }
+  
+  /* Sand background */
+  .bg-sand {
+    background-color: oklch(0.93 0.015 75);
+  }
+  
+  /* Ivory background */
+  .bg-ivory {
+    background-color: oklch(0.97 0.012 75);
+  }
+  
+  /* Deep brown text */
+  .text-deep {
+    color: oklch(0.15 0.02 60);
+  }
+  
+  /* Warm cream bg */
+  .bg-cream {
+    background-color: oklch(0.95 0.013 75);
+  }
+  
+  /* Premium button */
+  .btn-gold {
+    background-color: oklch(0.60 0.08 65);
+    color: oklch(0.98 0.005 75);
+    padding: 0.75rem 2rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+    border: 1px solid oklch(0.60 0.08 65);
+  }
+  
+  .btn-gold:hover {
+    background-color: oklch(0.50 0.07 60);
+    border-color: oklch(0.50 0.07 60);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px oklch(0.60 0.08 65 / 0.25);
+  }
+  
+  /* Outline gold button */
+  .btn-outline-gold {
+    background-color: transparent;
+    color: oklch(0.60 0.08 65);
+    padding: 0.75rem 2rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+    border: 1px solid oklch(0.60 0.08 65);
+  }
+  
+  .btn-outline-gold:hover {
+    background-color: oklch(0.60 0.08 65);
+    color: oklch(0.98 0.005 75);
+    transform: translateY(-1px);
+  }
+  
+  /* Section label */
+  .section-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: oklch(0.60 0.08 65);
+  }
+  
+  /* Display heading */
+  .display-heading {
+    font-family: 'Cormorant Garamond', 'Noto Serif SC', serif;
+    font-weight: 600;
+    line-height: 1.15;
+    color: oklch(0.15 0.02 60);
+  }
+  
+  /* Subtle card */
+  .card-subtle {
+    background-color: oklch(0.94 0.014 75);
+    border: 1px solid oklch(0.88 0.018 70);
+    transition: all 0.3s ease;
+  }
+  
+  .card-subtle:hover {
+    border-color: oklch(0.60 0.08 65);
+    box-shadow: 0 12px 40px oklch(0.15 0.02 60 / 0.08);
+    transform: translateY(-2px);
+  }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: oklch(0.97 0.012 75);
+}
+::-webkit-scrollbar-thumb {
+  background: oklch(0.75 0.06 65);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.60 0.08 65);
+}
+
+/* Selection color */
+::selection {
+  background: oklch(0.60 0.08 65 / 0.2);
+  color: oklch(0.15 0.02 60);
+}
