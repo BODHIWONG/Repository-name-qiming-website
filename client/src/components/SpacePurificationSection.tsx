@@ -6,7 +6,47 @@
 */
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Sparkles, Shield, Wind, ArrowRight } from "lucide-react";
+import { Sparkles, Shield, Wind, ArrowRight, Play, Quote } from "lucide-react";
+import { useState } from "react";
+
+const CLIENT_VIDEO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663267794185/G7GkzpZQq9p5c7yHvonweC/417_1775976518_0dca57b3.mp4";
+
+function VideoPlayer() {
+  const [playing, setPlaying] = useState(false);
+  return (
+    <div className="relative w-full aspect-video bg-[oklch(0.10_0.01_60)] border border-[oklch(0.35_0.03_60)] overflow-hidden">
+      {!playing ? (
+        <>
+          {/* Poster overlay */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-[oklch(0.12_0.02_60/0.9)]">
+            <button
+              onClick={() => setPlaying(true)}
+              className="w-16 h-16 rounded-full border-2 border-[oklch(0.60_0.08_65)] flex items-center justify-center text-[oklch(0.60_0.08_65)] hover:bg-[oklch(0.60_0.08_65/0.15)] transition-all duration-300 group"
+              aria-label="Play video"
+            >
+              <Play size={24} className="ml-1 group-hover:scale-110 transition-transform" />
+            </button>
+            <div className="text-center">
+              <p className="text-xs font-semibold text-white tracking-wider" style={{ fontFamily: "'Lato', 'Noto Sans SC', sans-serif" }}>
+                真实客户反馈视频
+              </p>
+              <p className="text-[0.6rem] text-[oklch(0.60_0.08_65)] tracking-widest uppercase mt-1" style={{ fontFamily: "'Lato', sans-serif" }}>
+                Real Client Feedback · Space Purification
+              </p>
+            </div>
+          </div>
+        </>
+      ) : (
+        <video
+          src={CLIENT_VIDEO_URL}
+          controls
+          autoPlay
+          className="w-full h-full object-cover"
+        />
+      )}
+    </div>
+  );
+}
 
 const TEXTURE_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663267794185/G7GkzpZQq9p5c7yHvonweC/qmfeng-texture-YTwfcEZMZmxLJghr5yrH9P.webp";
 
@@ -165,6 +205,95 @@ export default function SpacePurificationSection() {
             </motion.div>
           ))}
         </div>
+
+        {/* Real Client Video Testimonial */}
+        <motion.div
+          custom={4}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeIn}
+          className="mb-16"
+        >
+          <div className="flex items-center gap-3 mb-8">
+            <div className="h-px w-12 bg-gradient-to-r from-[oklch(0.60_0.08_65)] to-transparent" />
+            <span className="text-[0.65rem] font-bold tracking-[0.25em] uppercase text-[oklch(0.60_0.08_65)]"
+              style={{ fontFamily: "'Lato', sans-serif" }}>
+              {t("真实客户见证", "Real Client Testimonial")}
+            </span>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
+            {/* Video Player */}
+            <div className="relative group">
+              <VideoPlayer />
+            </div>
+
+            {/* Quote Block */}
+            <div className="space-y-6">
+              {/* Before */}
+              <div className="border-l-2 border-[oklch(0.35_0.03_60)] pl-5">
+                <p className="text-[0.6rem] font-bold tracking-[0.2em] uppercase text-[oklch(0.45_0.02_60)] mb-2"
+                  style={{ fontFamily: "'Lato', sans-serif" }}>
+                  {t("净化前", "Before Purification")}
+                </p>
+                <p className="text-sm text-[oklch(0.55_0.01_75)] leading-relaxed italic"
+                  style={{ fontFamily: "'Lato', 'Noto Sans SC', sans-serif" }}>
+                  {t(
+                    "「一进到屋子，瞅哪都害怕，就好像毛骨悚然那种感觉。早上起来就像要死要死，眼睛都是青的……」",
+                    '"Every time I entered the room, I was terrified of everything — a bone-chilling feeling. Waking up in the morning felt like dying, my eyes even turned bluish…"'
+                  )}
+                </p>
+              </div>
+
+              {/* After */}
+              <div className="border-l-2 border-[oklch(0.60_0.08_65)] pl-5">
+                <p className="text-[0.6rem] font-bold tracking-[0.2em] uppercase text-[oklch(0.60_0.08_65)] mb-2"
+                  style={{ fontFamily: "'Lato', sans-serif" }}>
+                  {t("净化后", "After Purification")}
+                </p>
+                <p className="text-sm text-white leading-relaxed italic"
+                  style={{ fontFamily: "'Lato', 'Noto Sans SC', sans-serif" }}>
+                  {t(
+                    "「昨天晚上处理完以后，屋里那边灯全闭了，就我一个人开灯吃饭，啥问题没有！真的有很多帮助！」",
+                    '"After the purification last night, all the other lights were off, and I ate alone with just one light on — absolutely no problem at all! It truly helped so much!"'
+                  )}
+                </p>
+              </div>
+
+              {/* Master Observation */}
+              <div className="bg-[oklch(0.18_0.02_60/0.8)] border border-[oklch(0.60_0.08_65/0.3)] p-5">
+                <div className="flex items-start gap-3">
+                  <Quote size={14} className="text-[oklch(0.60_0.08_65)] flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-xs text-[oklch(0.70_0.01_75)] leading-relaxed"
+                      style={{ fontFamily: "'Lato', 'Noto Sans SC', sans-serif" }}>
+                      {t(
+                        "启明大师现场印证：「你的脸色变化非常明显，最开始你的眼睛是青的，现在正常了。」",
+                        "Master Qiming's on-site observation: \"Your complexion has changed dramatically. Your eyes were bluish at the start — now they look completely normal.\""
+                      )}
+                    </p>
+                    <p className="text-[0.6rem] text-[oklch(0.60_0.08_65)] mt-2 tracking-wider"
+                      style={{ fontFamily: "'Lato', sans-serif" }}>
+                      — {t("黄启明大师 · 现场见证", "Master Huang Qiming · On-site Witness")}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Client Final Words */}
+              <div className="text-center py-4">
+                <p className="display-heading text-2xl text-[oklch(0.75_0.06_65)]">
+                  {t("「你是我的贵人！」", '"You are my benefactor!"')}
+                </p>
+                <p className="text-xs text-[oklch(0.45_0.02_60)] mt-2"
+                  style={{ fontFamily: "'Lato', 'Noto Sans SC', sans-serif" }}>
+                  — {t("空间净化客户 · 真实反馈视频", "Space Purification Client · Real Feedback Video")}
+                </p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
 
         {/* Process + CTA */}
         <div className="grid lg:grid-cols-2 gap-12 items-start">

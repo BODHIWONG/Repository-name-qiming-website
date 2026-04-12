@@ -57,6 +57,13 @@ export default function TestimonialsSection() {
           location: "新加坡",
           track: "疗愈",
         },
+        {
+          quote: "以前一进到屋子，瞅哪都害怕，毛骨悚然。昨天晚上处理完，屋里灯全闭了，就我一个人开灯吃饭，啥问题没有！你是我的贵人！真的有很多帮助！",
+          author: "住宅客户",
+          location: "新加坡",
+          track: "空间净化",
+          featured: true,
+        },
       ]
     : [
         {
@@ -64,6 +71,13 @@ export default function TestimonialsSection() {
           author: "F&B Business Owner",
           location: "Singapore",
           track: "Career",
+        },
+        {
+          quote: "Before, I was terrified every time I entered my room — a bone-chilling feeling. After the purification, all lights off, I ate alone with just one light on — absolutely no problem! You are my benefactor! It truly helped so much!",
+          author: "Residential Client",
+          location: "Singapore",
+          track: "Space Purification",
+          featured: true,
         },
         {
           quote: "The biggest difference was clarity. The spatial recommendations felt grounded and realistic, not vague or overly mystical.",
@@ -106,6 +120,8 @@ export default function TestimonialsSection() {
     "Healing": "text-[oklch(0.50_0.08_340)]",
     "商业": "text-[oklch(0.50_0.08_65)]",
     "Business": "text-[oklch(0.50_0.08_65)]",
+    "空间净化": "text-[oklch(0.60_0.08_65)] font-bold",
+    "Space Purification": "text-[oklch(0.60_0.08_65)] font-bold",
   };
 
   return (
@@ -149,7 +165,11 @@ export default function TestimonialsSection() {
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeIn}
-              className="card-subtle p-6 md:p-7 bg-white/80 backdrop-blur-sm"
+              className={`card-subtle p-6 md:p-7 backdrop-blur-sm ${
+                (item as any).featured
+                  ? "bg-[oklch(0.15_0.02_60)] border border-[oklch(0.60_0.08_65/0.5)] text-white"
+                  : "bg-white/80"
+              }`}
             >
               {/* Stars */}
               <div className="flex gap-0.5 mb-4">
@@ -159,7 +179,10 @@ export default function TestimonialsSection() {
               </div>
 
               {/* Quote */}
-              <blockquote className="text-sm text-[oklch(0.30_0.02_60)] leading-relaxed mb-5 italic"
+              <blockquote
+                className={`text-sm leading-relaxed mb-5 italic ${
+                  (item as any).featured ? "text-[oklch(0.85_0.01_75)]" : "text-[oklch(0.30_0.02_60)]"
+                }`}
                 style={{ fontFamily: "'Cormorant Garamond', 'Noto Serif SC', serif", fontSize: "0.95rem" }}>
                 「{item.quote}」
               </blockquote>
@@ -167,7 +190,9 @@ export default function TestimonialsSection() {
               {/* Author */}
               <div className="flex items-center justify-between border-t border-[oklch(0.92_0.015_70)] pt-4">
                 <div>
-                  <p className="text-xs font-semibold text-[oklch(0.25_0.02_60)]"
+                  <p className={`text-xs font-semibold ${
+                    (item as any).featured ? "text-white" : "text-[oklch(0.25_0.02_60)]"
+                  }`}
                     style={{ fontFamily: "'Lato', 'Noto Sans SC', sans-serif" }}>
                     {item.author}
                   </p>
