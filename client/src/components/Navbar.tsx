@@ -38,15 +38,17 @@ export default function Navbar() {
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
-        <a href="#" className="flex flex-col leading-tight group">
+        <a href="#" className="flex items-center gap-3 group">
+          <img
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663267794185/G7GkzpZQq9p5c7yHvonweC/qmfeng-logo_029b66c8.jpg"
+            alt="Qiming Prosperity Feng Shui Logo"
+            className="h-10 md:h-12 w-auto object-contain rounded-full transition-transform duration-300 group-hover:scale-105"
+          />
           <span
             style={{ fontFamily: "'Cormorant Garamond', 'Noto Serif SC', serif" }}
-            className="text-xl md:text-2xl font-semibold text-[oklch(0.15_0.02_60)] tracking-wide group-hover:text-[oklch(0.60_0.08_65)] transition-colors duration-300"
+            className="hidden sm:block text-lg md:text-xl font-semibold text-[oklch(0.15_0.02_60)] tracking-wide group-hover:text-[oklch(0.60_0.08_65)] transition-colors duration-300"
           >
-            {t("启明风水美学", "Qiming Feng Shui")}
-          </span>
-          <span className="text-[0.6rem] font-light tracking-[0.25em] uppercase text-[oklch(0.60_0.08_65)]">
-            {t("奇门 · 风水 · 疗愈", "Qimen · Feng Shui · Healing")}
+            {t("启明风水美学", "Qiming Prosperity")}
           </span>
         </a>
 

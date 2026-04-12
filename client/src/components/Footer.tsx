@@ -23,13 +23,20 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-10 mb-12">
           {/* Brand */}
           <div>
-            <div className="mb-4">
-              <p className="display-heading text-xl text-white mb-1">
-                {t("启明风水美学", "Qiming Feng Shui")}
-              </p>
-              <p className="text-[0.6rem] tracking-[0.25em] uppercase text-[oklch(0.60_0.08_65)]">
-                {t("奇门 · 风水 · 疗愈", "Qimen · Feng Shui · Healing")}
-              </p>
+            <div className="mb-5 flex items-center gap-3">
+              <img
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663267794185/G7GkzpZQq9p5c7yHvonweC/qmfeng-logo_029b66c8.jpg"
+                alt="Qiming Prosperity Feng Shui"
+                className="h-14 w-14 object-contain rounded-full border border-[oklch(0.35_0.04_65)]"
+              />
+              <div>
+                <p className="display-heading text-lg text-white mb-0.5">
+                  {t("启明风水美学", "Qiming Prosperity")}
+                </p>
+                <p className="text-[0.55rem] tracking-[0.22em] uppercase text-[oklch(0.60_0.08_65)]">
+                  Feng Shui · Singapore
+                </p>
+              </div>
             </div>
             <p className="text-xs text-[oklch(0.50_0.01_75)] leading-relaxed"
               style={{ fontFamily: "'Lato', 'Noto Sans SC', sans-serif" }}>
