@@ -1,6 +1,6 @@
 {
-  "buildCommand": "pnpm install && pnpm run build",
-  "outputDirectory": "dist",
+  "buildCommand": "pnpm run build",
+  "outputDirectory": "dist/public",
   "framework": "vite",
   "rewrites": [
     { "source": "/((?!assets|favicon|robots|manifest).*)", "destination": "/index.html" }
