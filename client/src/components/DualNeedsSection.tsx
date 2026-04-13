@@ -110,21 +110,6 @@ export default function DualNeedsSection() {
                 ))}
               </div>
 
-              {/* Target Audience */}
-              <div className="bg-[oklch(0.97_0.012_75)] border border-[oklch(0.88_0.018_70)] p-4 mb-6">
-                <p className="text-xs text-[oklch(0.50_0.02_65)] mb-1 uppercase tracking-wider font-bold"
-                  style={{ fontFamily: "'Lato', sans-serif" }}>
-                  {t("适合人群", "Ideal For")}
-                </p>
-                <p className="text-sm text-[oklch(0.25_0.02_60)]"
-                  style={{ fontFamily: "'Lato', 'Noto Sans SC', sans-serif" }}>
-                  {t(
-                    "25-55岁，EP/SP新移民或本地PMEB，具备扎实经济基础，高度看重逻辑分析",
-                    "Age 25-55, EP/SP new immigrants or local PMEBs, strong financial foundation, value logical analysis"
-                  )}
-                </p>
-              </div>
-
               <a href="#services" className="inline-flex items-center gap-2 text-sm font-semibold text-[oklch(0.60_0.08_65)] hover:gap-3 transition-all duration-300"
                 style={{ fontFamily: "'Lato', sans-serif" }}>
                 {t("查看相关服务", "View Services")} <ArrowRight size={14} />
@@ -174,21 +159,6 @@ export default function DualNeedsSection() {
                     </span>
                   </div>
                 ))}
-              </div>
-
-              {/* Target Audience */}
-              <div className="bg-[oklch(0.97_0.012_75)] border border-[oklch(0.88_0.018_70)] p-4 mb-6">
-                <p className="text-xs text-[oklch(0.50_0.02_65)] mb-1 uppercase tracking-wider font-bold"
-                  style={{ fontFamily: "'Lato', sans-serif" }}>
-                  {t("适合人群", "Ideal For")}
-                </p>
-                <p className="text-sm text-[oklch(0.25_0.02_60)]"
-                  style={{ fontFamily: "'Lato', 'Noto Sans SC', sans-serif" }}>
-                  {t(
-                    "25-55岁，单身、离异或深陷情感纠葛的女性群体为主，渴求斩断负面磁场",
-                    "Age 25-55, primarily single, divorced or emotionally entangled women seeking to break negative energy patterns"
-                  )}
-                </p>
               </div>
 
               <a href="#services" className="inline-flex items-center gap-2 text-sm font-semibold text-[oklch(0.60_0.08_65)] hover:gap-3 transition-all duration-300"
