@@ -1,33 +1,24 @@
 /*
-  Home — 启明风水美学 | Qiming Prosperity Feng Shui
-  Design: Premium Advisory Firm × Wabi-Sabi Warmth
+  Home — QIMING FENG SHUI · High-Conversion Ultimate Edition
   
-  Page Structure:
-  1. Navbar (sticky)
-  2. HeroSection (full-screen, asymmetric)
-  3. DualNeedsSection (career + healing)
-  4. BlueOceanSection (dark, comparison)
-  5. ServicesSection (three-tier funnel)
-  5b. SpacePurificationSection (core advantage)
-  6. MasterSection (credentials)
-  7. CasesSection (business cases)
-  8. TestimonialsSection (client voices)
-  9. ProductsSection (Tongshifu)
-  10. InsightsSection (content marketing)
-  11. ContactSection (dark, WhatsApp CTA)
-  12. Footer
+  Page Flow (陌生 → 信任 → 成交 → 高客单):
+  1. Navbar
+  2. HeroSection — Transform Your Luck & Wealth
+  3. ServicesSection — 01 Awakening | 02 Alignment | 03 Mastery
+  4. MasterSection — Trusted Presence (16+ years, real photo, lineage)
+  5. CasesSection — Real Client Case Studies
+  6. TestimonialsSection — Client Voices
+  7. ProductsSection — Auspicious Catalysts 能量载体
+  8. ContactSection — Visit Our Studio + Google Map
+  9. Footer
 */
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import DualNeedsSection from "@/components/DualNeedsSection";
-import BlueOceanSection from "@/components/BlueOceanSection";
 import ServicesSection from "@/components/ServicesSection";
-import SpacePurificationSection from "@/components/SpacePurificationSection";
 import MasterSection from "@/components/MasterSection";
 import CasesSection from "@/components/CasesSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ProductsSection from "@/components/ProductsSection";
-import InsightsSection from "@/components/InsightsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import FloatingActions from "@/components/FloatingActions";
@@ -37,15 +28,11 @@ export default function Home() {
     <div className="min-h-screen bg-[oklch(0.97_0.012_75)]">
       <Navbar />
       <HeroSection />
-      <DualNeedsSection />
-      <BlueOceanSection />
       <ServicesSection />
-      <SpacePurificationSection />
       <MasterSection />
       <CasesSection />
       <TestimonialsSection />
       <ProductsSection />
-      <InsightsSection />
       <ContactSection />
       <Footer />
       <FloatingActions />

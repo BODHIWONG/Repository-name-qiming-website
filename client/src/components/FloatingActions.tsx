@@ -45,9 +45,9 @@ export default function FloatingActions() {
         className="flex items-center gap-2 bg-[oklch(0.60_0.08_65)] text-white px-4 py-3 shadow-lg shadow-[oklch(0.60_0.08_65/0.3)] hover:bg-[oklch(0.50_0.07_60)] transition-all duration-300"
       >
         <MessageCircle size={16} />
-        <span className="text-xs font-bold tracking-wide hidden sm:block"
-          style={{ fontFamily: "'Lato', sans-serif" }}>
-          {t("立即咨询", "Book Now")}
+        <span className="text-xs font-bold tracking-widest uppercase hidden sm:block"
+          style={{ fontFamily: "'Lato', sans-serif", letterSpacing: "0.12em" }}>
+          {t("从这里开始", "Start Here")}
         </span>
       </motion.a>
     </div>

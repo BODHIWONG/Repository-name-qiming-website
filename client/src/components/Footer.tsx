@@ -10,11 +10,10 @@ export default function Footer() {
 
   const navLinks = [
     { href: "#services", zh: "服务体系", en: "Services" },
-    { href: "#dual-needs", zh: "您的需求", en: "Your Needs" },
-    { href: "#master", zh: "关于启明", en: "About Master" },
-    { href: "#cases", zh: "成功案例", en: "Case Studies" },
-    { href: "#products", zh: "风水美学产品", en: "Products" },
-    { href: "#contact", zh: "预约咨询", en: "Book Now" },
+    { href: "#master", zh: "关于启明", en: "About" },
+    { href: "#cases", zh: "成功案例", en: "Cases" },
+    { href: "#products", zh: "能量载体", en: "Catalysts" },
+    { href: "#contact", zh: "联系我们", en: "Contact" },
   ];
 
   return (
@@ -41,8 +40,8 @@ export default function Footer() {
             <p className="text-xs text-[oklch(0.50_0.01_75)] leading-relaxed"
               style={{ fontFamily: "'Lato', 'Noto Sans SC', sans-serif" }}>
               {t(
-                "用现代逻辑解析传统奇门，用心理学疗愈都市高压。新加坡高端风水命理咨询。",
-                "Decoding traditional Qimen with modern logic, healing urban stress with psychology. Premium feng shui consultation in Singapore."
+                "我们不是在卖风水。我们给你的，是对人生方向的确定性。",
+                "We don't sell Feng Shui. We deliver certainty in your life direction."
               )}
             </p>
             {/* Social */}

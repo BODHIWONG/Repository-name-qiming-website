@@ -163,12 +163,13 @@ export default function MasterSection() {
             {/* CTA */}
             <motion.div custom={4} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
               <a
-                href="https://wa.me/6589418791?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20Master%20Qiming."
+                href="https://wa.me/6589418791?text=Hello%2C%20I%27d%20like%20a%20Deep%20Insight%20session%20with%20Master%20Qiming."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-gold inline-flex items-center gap-2"
+                className="inline-flex items-center gap-2 px-7 py-3.5 text-sm font-bold tracking-widest uppercase transition-all duration-300 hover:opacity-90"
+                style={{ fontFamily: "'Lato', sans-serif", background: "oklch(0.60 0.08 65)", color: "oklch(0.98 0.005 75)", letterSpacing: "0.12em" }}
               >
-                {t("与启明大师对话", "Connect with Master Qiming")}
+                {t("深度洞察", "Deep Insight")}
               </a>
             </motion.div>
           </div>
