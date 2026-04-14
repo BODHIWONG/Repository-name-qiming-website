@@ -1,4 +1,4 @@
-// trigger redeploy/*
+/ trigger redeploy/*
   Page Flow:
   1. Navbar
   2. HeroSection
