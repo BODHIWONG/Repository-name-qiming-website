@@ -5,28 +5,14 @@ export default function VideoSection() {
   const { t } = useLanguage();
 
   const videos = [
-    {
-      titleZh: "空间能量净化后的真实变化",
-      titleEn: "After Space Energy Clearing",
-      descZh: "从压抑到舒展，空间调整后的真实反馈",
-      descEn: "Real transformation after energy clearing",
-      url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    },
-    {
-      titleZh: "客户反馈：睡眠改善",
-      titleEn: "Client Feedback: Better Sleep",
-      descZh: "真实客户睡眠与情绪变化",
-      descEn: "Real client experience after consultation",
-      url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    },
-    {
-      titleZh: "为什么空间影响运气？",
-      titleEn: "How Space Affects Luck",
-      descZh: "启明大师讲解空间与能量",
-      descEn: "Master explains energy & space",
-      url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    },
-  ];
+  {
+    titleZh: "真实案例：空间净化后的变化",
+    titleEn: "Real Case Transformation",
+    descZh: "客户真实反馈：气场调整后，状态明显改善",
+    descEn: "Client feedback after energy clearing",
+    url: "https://www.youtube.com/embed/3Rpj8CotZVo",
+  },
+];
 
   return (
     <section className="py-24 bg-[oklch(0.95_0.013_75)]">
