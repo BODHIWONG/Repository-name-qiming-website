@@ -9,7 +9,7 @@ import ProductsSection from "@/components/ProductsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import FloatingActions from "@/components/FloatingActions";
-
+import ConsultationSection from "@/components/ConsultationSection";
 export default function Home() {
   return (
     <div className="min-h-screen bg-[oklch(0.97_0.012_75)]">
@@ -21,10 +21,10 @@ export default function Home() {
       <TestimonialsSection />
       <VideoSection />
       <ProductsSection />
+      <ConsultationSection />
       <ContactSection />
       <Footer />
       <FloatingActions />
     </div>
   );
 }
-
