@@ -1,6 +1,4 @@
 // trigger redeploy/*
-  Home — QIMING FENG SHUI · High-Conversion Ultimate Edition
-
   Page Flow:
   1. Navbar
   2. HeroSection
