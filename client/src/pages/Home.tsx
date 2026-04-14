@@ -1,16 +1,4 @@
-/*
-  Page Flow:
-  1. Navbar
-  2. HeroSection
-  3. ServicesSection
-  4. MasterSection
-  5. CasesSection
-  6. TestimonialsSection
-  7. VideoSection
-  8. ProductsSection
-  9. ContactSection
-  10. Footer
-*/
+
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
