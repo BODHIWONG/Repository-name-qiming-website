@@ -1,0 +1,64 @@
+import { motion } from "framer-motion";
+import { useLanguage } from "@/contexts/LanguageContext";
+
+export default function VideoSection() {
+  const { t } = useLanguage();
+
+  const videos = [
+    {
+      titleZh: "真实案例：空间净化后的变化",
+      titleEn: "Real Case Transformation",
+      descZh: "客户真实反馈：气场调整后，状态明显改善",
+      descEn: "Client feedback after energy clearing",
+      url: "https://www.youtube.com/embed/3Rpj8CotZVo",
+    },
+  ];
+
+  return (
+    <section className="py-24 bg-[oklch(0.95_0.013_75)]">
+      <div className="container">
+        <div className="mb-16">
+          <p className="text-xs uppercase tracking-widest text-[oklch(0.6_0.08_65)] mb-3">
+            {t("真实案例与讲解", "Real Cases")}
+          </p>
+
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">
+            {t("看得见的改变，更有说服力", "Real Transformation Speaks")}
+          </h2>
+
+          <p className="text-sm text-gray-600 max-w-xl">
+            {t(
+              "通过真实视频，展示空间调整、客户反馈与风水影响。",
+              "See real results through actual cases and explanations."
+            )}
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {videos.map((v, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1 }}
+              className="bg-white border"
+            >
+              <div className="aspect-video">
+                <iframe
+                  src={v.url}
+                  className="w-full h-full"
+                  allowFullScreen
+                />
+              </div>
+
+              <div className="p-5">
+                <h3 className="font-bold mb-2">{t(v.titleZh, v.titleEn)}</h3>
+                <p className="text-sm text-gray-600">{t(v.descZh, v.descEn)}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
