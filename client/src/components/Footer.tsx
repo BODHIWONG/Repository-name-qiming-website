@@ -1,6 +1,8 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Instagram, Facebook, Youtube } from "lucide-react";
 
+const LOGO_URL = "/logo-qimen-strategy.png";
+
 export default function Footer() {
   const { t } = useLanguage();
 
@@ -17,9 +19,9 @@ export default function Footer() {
           <div>
             <div className="mb-5 flex items-center gap-3">
               <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663267794185/G7GkzpZQq9p5c7yHvonweC/qmfeng-logo_029b66c8.jpg"
-                alt="Tian Yi He Hui"
-                className="h-14 w-14 object-contain rounded-full border border-[oklch(0.35_0.04_65)]"
+                src={LOGO_URL}
+                alt="Qimen Strategy Symbol"
+                className="h-14 w-14 object-contain"
               />
               <div>
                 <p className="display-heading text-lg text-white mb-0.5">
@@ -103,3 +105,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+  );
+}
