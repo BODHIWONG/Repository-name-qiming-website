@@ -36,7 +36,7 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_45%,rgba(165,111,62,0.16),transparent_38%)]" />
       </div>
 
-      <div className="relative container pt-28 pb-20 md:pt-36 md:pb-28">
+      <div className="relative container pt-32 pb-20 md:pt-40 md:pb-28">
         <div className="max-w-4xl">
           <motion.div
             custom={0}
@@ -86,7 +86,7 @@ export default function HeroSection() {
           >
             {t(
               "心识 · 时机 · 环境 · 策略觉察",
-              "Mind · Timing · Environment · Strategic Awareness"
+              "Mind · Timing · Environment · Strategic Human Awareness"
             )}
           </motion.p>
 
@@ -102,8 +102,8 @@ export default function HeroSection() {
             }}
           >
             {t(
-              "天乙合会不是第二个风水服务站，而是黄启明大师面向未来建立的东方战略思想平台。它探索心识、时机、环境与人生决策之间的深层关系，承载奇门决策、梵音心源疗愈与文化策划三大方向。",
-              "Tian Yi He Hui is not another Feng Shui service site. It is an Eastern strategic intelligence platform founded by Master Huang Qiming to explore the deeper relationship between mind, timing, environment and life decisions — integrating Qimen Strategy, sacred sound healing and cultural advisory."
+              "天乙合会，并非传统意义上的风水品牌。它是启明遁甲创始人黄启明大师面向 AI 时代建立的东方战略智慧平台，探索意识、环境、时机与战略觉察之间的深层关系。",
+              "Tian Yi He Hui is an Eastern Strategic Intelligence platform founded by Master Huang Qiming, founder of Qimen Strategy, for the AI era — dedicated to exploring the deeper relationship between consciousness, environment, timing, and strategic human awareness."
             )}
           </motion.p>
 
@@ -176,7 +176,7 @@ export default function HeroSection() {
             style={{ fontFamily: "'Lato', sans-serif" }}
           >
             <MapPin size={11} className="text-[oklch(0.60_0.08_65)]" />
-            <span>Singapore · Founded by Master Huang Qiming</span>
+            <span>Singapore · Founded by Master Huang Qiming, Founder of Qimen Strategy</span>
           </motion.div>
         </div>
       </div>
