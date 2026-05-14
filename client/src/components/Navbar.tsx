@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Menu, X } from "lucide-react";
 
+const LOGO_URL = "/logo-qimen-strategy.png";
 const WA_LINK = "https://wa.me/6589418791?text=Hello%2C%20I%20would%20like%20to%20learn%20more%20about%20Tian%20Yi%20He%20Hui%20and%20Eastern%20Strategic%20Intelligence.";
 
 export default function Navbar() {
@@ -32,9 +33,9 @@ export default function Navbar() {
       <div className="container flex items-center justify-between h-16 md:h-20">
         <a href="#" className="flex items-center gap-3 group">
           <img
-            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663267794185/G7GkzpZQq9p5c7yHvonweC/qmfeng-logo_029b66c8.jpg"
-            alt="Tian Yi He Hui"
-            className="h-10 md:h-12 w-auto object-contain rounded-full transition-transform duration-300 group-hover:scale-105"
+            src={LOGO_URL}
+            alt="Tian Yi He Hui Qimen Strategy Symbol"
+            className="h-10 md:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
           />
           <div>
             <span
