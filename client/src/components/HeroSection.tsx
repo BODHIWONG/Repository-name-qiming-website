@@ -102,8 +102,8 @@ export default function HeroSection() {
             }}
           >
             {t(
-              "天乙合会，并非传统意义上的风水品牌。它是启明遁甲创始人黄启明大师面向 AI 时代建立的东方战略智慧平台，探索意识、环境、时机与战略觉察之间的深层关系。",
-              "Tian Yi He Hui is an Eastern Strategic Intelligence platform founded by Master Huang Qiming, founder of Qimen Strategy, for the AI era — dedicated to exploring the deeper relationship between consciousness, environment, timing, and strategic human awareness."
+              "天乙合会，一个立足新加坡、面向未来的东方战略智慧平台。‘天乙’象征关键时机、天时运势与贵人之机；‘合会’则代表人与空间、决策与时代之间更深层的交汇与共振。在快速变化、信息繁杂的时代，天乙合会尝试重新连接东方智慧、战略判断、空间能量，以及人与环境之间被现代社会逐渐忽视的深层关系。由黄启明大师创立的启明遁甲 Qimen Strategy，正是这一体系中的核心战略框架之一。",
+              "Tian Yi He Hui is a Singapore-based Eastern Strategic Intelligence platform created for the future. ‘Tian Yi’ symbolizes critical timing, heavenly alignment and noble opportunity; ‘He Hui’ represents the deeper convergence between people, space, decisions and the era they live in. In a fast-changing and information-saturated world, Tian Yi He Hui reconnects Eastern wisdom, strategic judgment, spatial energy and the deeper relationship between human beings and their environment. Qimen Strategy, founded by Master Huang Qiming, is one of the core strategic frameworks within this system."
             )}
           </motion.p>
 
