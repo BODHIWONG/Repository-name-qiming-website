@@ -30,21 +30,21 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="container flex items-center justify-between h-16 md:h-20">
-        <a href="#" className="flex items-center gap-3 group">
+      <div className="container flex items-center justify-between h-20 md:h-24">
+        <a href="#" className="flex items-center gap-4 group">
           <img
             src={LOGO_URL}
             alt="Tian Yi He Hui Qimen Strategy Symbol"
-            className="h-10 md:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            className="h-14 md:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
           />
           <div>
             <span
               style={{ fontFamily: "'Cormorant Garamond', 'Noto Serif SC', serif" }}
-              className="hidden sm:block text-lg md:text-xl font-semibold text-[oklch(0.15_0.02_60)] tracking-wide group-hover:text-[oklch(0.60_0.08_65)] transition-colors duration-300"
+              className="hidden sm:block text-xl md:text-2xl font-semibold text-[oklch(0.15_0.02_60)] tracking-wide group-hover:text-[oklch(0.60_0.08_65)] transition-colors duration-300"
             >
               {t("天乙合会", "Tian Yi He Hui")}
             </span>
-            <span className="hidden sm:block text-[0.58rem] tracking-[0.22em] uppercase text-[oklch(0.60_0.08_65)]">
+            <span className="hidden sm:block text-[0.7rem] tracking-[0.28em] uppercase text-[oklch(0.60_0.08_65)]">
               Eastern Strategic Intelligence
             </span>
           </div>
