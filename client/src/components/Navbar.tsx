@@ -19,6 +19,7 @@ export default function Navbar() {
   const navLinks = [
     { href: "#services", zh: "三大主轴", en: "Three Pillars" },
     { href: "#master", zh: "关于启明", en: "Founder" },
+    { href: "/journal-ai-era-eastern-intelligence", zh: "思想档案", en: "Journal" },
     { href: "#contact", zh: "联系", en: "Contact" },
   ];
 
