@@ -7,6 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import Home from "./pages/Home";
 import JournalAiEraEasternIntelligence from "./pages/JournalAiEraEasternIntelligence";
+import JournalSoundSessionClientNotes from "./pages/JournalSoundSessionClientNotes";
 
 function Router() {
   return (
@@ -15,6 +16,10 @@ function Router() {
       <Route
         path={"/journal-ai-era-eastern-intelligence"}
         component={JournalAiEraEasternIntelligence}
+      />
+      <Route
+        path={"/journal-sound-session-client-notes"}
+        component={JournalSoundSessionClientNotes}
       />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
