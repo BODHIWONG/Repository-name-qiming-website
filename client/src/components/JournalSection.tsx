@@ -10,11 +10,11 @@ const essays = [
     href: "/journal-ai-era-eastern-intelligence",
   },
   {
-    category: "QIMEN STRATEGY",
-    title: "Why Smart People Stay Stuck",
+    category: "SACRED SOUND",
+    title: "Three Client Experiences from a Sacred Sound Session",
     excerpt:
-      "The problem is often not intelligence, but timing, environment and unseen human dynamics.",
-    href: "#",
+      "A quiet record of three different client experiences: release, stillness and inner calm.",
+    href: "/journal-sound-session-client-notes",
   },
   {
     category: "CONSCIOUSNESS",
