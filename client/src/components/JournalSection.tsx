@@ -3,6 +3,13 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const essays = [
   {
+    category: "QIMEN STRATEGY",
+    title: "Time-Based Qimen Dunjia: A Contemporary View of Traditional Time-Space Decision Culture",
+    excerpt:
+      "Applying traditional time-space wisdom to modern strategic decision-making, situational analysis and risk awareness.",
+    href: "/journal-time-based-qimen-strategy",
+  },
+  {
     category: "AI ERA",
     title: "Why Eastern Strategic Intelligence Matters in the AI Era",
     excerpt:
@@ -15,13 +22,6 @@ const essays = [
     excerpt:
       "A quiet record of three different client experiences: release, stillness and inner calm.",
     href: "/journal-sound-session-client-notes",
-  },
-  {
-    category: "CONSCIOUSNESS",
-    title: "Environment and Human Awareness",
-    excerpt:
-      "Environment silently shapes emotion, perception and long-term decision-making patterns.",
-    href: "#",
   },
 ];
 
