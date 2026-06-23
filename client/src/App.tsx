@@ -8,6 +8,7 @@ import { LanguageProvider } from "./contexts/LanguageContext";
 import Home from "./pages/Home";
 import JournalAiEraEasternIntelligence from "./pages/JournalAiEraEasternIntelligence";
 import JournalSoundSessionClientNotes from "./pages/JournalSoundSessionClientNotes";
+import JournalNew from "./pages/JournalTechniquesCompassion";
 import JournalTimeBasedQimenStrategy from "./pages/JournalTimeBasedQimenStrategy";
 
 function Router() {
@@ -21,6 +22,10 @@ function Router() {
       <Route
         path={"/journal-sound-session-client-notes"}
         component={JournalSoundSessionClientNotes}
+      />
+      <Route
+        path={"/journal-techniques-compassion"}
+        component={JournalNew}
       />
       <Route
         path={"/journal-time-based-qimen-strategy"}
