@@ -3,6 +3,13 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const essays = [
   {
+    category: "QIMEN PHILOSOPHY",
+    title: "When Techniques End, Compassion Continues",
+    excerpt:
+      "A quiet reflection on metaphysics, virtue and the real foundation of change.",
+    href: "/journal-techniques-compassion",
+  },
+  {
     category: "QIMEN STRATEGY",
     title: "Time-Based Qimen Dunjia: A Contemporary View of Traditional Time-Space Decision Culture",
     excerpt:
@@ -70,7 +77,7 @@ export default function JournalSection() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-px bg-[oklch(0.90_0.015_70)]">
+        <div className="grid md:grid-cols-4 gap-px bg-[oklch(0.90_0.015_70)]">
           {essays.map((essay, index) => (
             <motion.a
               key={index}
