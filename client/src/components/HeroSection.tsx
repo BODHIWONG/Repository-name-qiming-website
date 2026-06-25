@@ -6,7 +6,7 @@ const HERO_BG =
   "https://d2xsxph8kpxj0f.cloudfront.net/310519663267794185/G7GkzpZQq9p5c7yHvonweC/qmfeng-hero-DRikTXt9yeL9ZRYsLqL2XL.webp";
 
 const WA_LINK =
-  "https://wa.me/6589418791?text=Hello%20Master%20Qiming%2C%20I%20would%20like%20to%20understand%20Tian%20Yi%20He%20Hui%20and%20Eastern%20Strategic%20Intelligence.";
+  "https://wa.me/6589418791?text=Hello%20Qimen%20Strategy%2C%20I%20would%20like%20to%20consult%20about%20Qi%20Men%20Dun%20Jia%20Strategic%20Decision%20Advisory%20in%20Singapore.";
 
 export default function HeroSection() {
   const { t } = useLanguage();
@@ -29,7 +29,7 @@ export default function HeroSection() {
       <div className="absolute inset-0">
         <img
           src={HERO_BG}
-          alt="Tian Yi He Hui Eastern Strategic Intelligence Singapore"
+          alt="Qimen Strategy Strategic Feng Shui and Qi Men Decision Advisory Singapore"
           className="w-full h-full object-cover opacity-70"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.97_0.012_75/0.98)] via-[oklch(0.97_0.012_75/0.88)] to-[oklch(0.97_0.012_75/0.30)]" />
@@ -50,7 +50,7 @@ export default function HeroSection() {
               className="text-[0.68rem] tracking-[0.25em] uppercase text-[oklch(0.60_0.08_65)] font-semibold"
               style={{ fontFamily: "'Lato', sans-serif" }}
             >
-              {t("天乙合会 · 新加坡", "Tian Yi He Hui · Singapore")}
+              {t("启明遁甲 · 新加坡", "Qimen Strategy · Singapore")}
             </span>
           </motion.div>
 
@@ -67,9 +67,9 @@ export default function HeroSection() {
               letterSpacing: "-0.025em",
             }}
           >
-            Eastern Strategic <br />
+            Qimen <br />
             <span style={{ color: "oklch(0.60 0.08 65)" }}>
-              Intelligence
+              Strategy
             </span>
           </motion.h1>
 
@@ -85,8 +85,8 @@ export default function HeroSection() {
             }}
           >
             {t(
-              "心识 · 时机 · 环境 · 策略觉察",
-              "Mind · Timing · Environment · Strategic Human Awareness"
+              "命运，并不只由能力决定",
+              "Destiny is not shaped by ability alone"
             )}
           </motion.p>
 
@@ -102,8 +102,8 @@ export default function HeroSection() {
             }}
           >
             {t(
-              "天乙合会，一个立足新加坡、面向未来的东方战略智慧平台。‘天乙’象征关键时机、天时运势与贵人之机；‘合会’则代表人与空间、决策与时代之间更深层的交汇与共振。在快速变化、信息繁杂的时代，天乙合会尝试重新连接东方智慧、战略判断、空间能量，以及人与环境之间被现代社会逐渐忽视的深层关系。由黄启明大师创立的启明遁甲 Qimen Strategy，正是这一体系中的核心战略框架之一。",
-              "Tian Yi He Hui is a Singapore-based Eastern Strategic Intelligence platform created for the future. ‘Tian Yi’ symbolizes critical timing, heavenly alignment and noble opportunity; ‘He Hui’ represents the deeper convergence between people, space, decisions and the era they live in. In a fast-changing and information-saturated world, Tian Yi He Hui reconnects Eastern wisdom, strategic judgment, spatial energy and the deeper relationship between human beings and their environment. Qimen Strategy, founded by Master Huang Qiming, is one of the core strategic frameworks within this system."
+              "很多时候，我们并非输给了能力，而是输给了那些看不见，却真实影响人生与事业结果的力量。空间影响能量，能量影响状态，状态影响决策，而决策最终塑造命运。启明遁甲融合奇门遁甲智慧、战略风水布局与能量调频实践，帮助企业家、专业人士与家庭，在关键决策、空间布局与内在状态之间建立更深层的和谐、清晰与平衡。因为真正的成功，不仅来自努力，更来自正确的布局。",
+              "Many believe success depends on ability alone. At Qimen Strategy, we see a deeper pattern: environment shapes energy, energy shapes state, state shapes decisions, and decisions shape outcomes. Blending Qi Men Dun Jia, strategic Feng Shui and energy alignment, Qimen Strategy helps entrepreneurs, professionals and families build deeper harmony, clarity and balance between timing, environment, people and decisions."
             )}
           </motion.p>
 
@@ -124,7 +124,7 @@ export default function HeroSection() {
                 letterSpacing: "0.12em",
               }}
             >
-              {t("探索三大主轴", "Explore the Three Pillars")}
+              {t("探索顾问服务", "Explore Advisory Services")}
               <ArrowRight size={14} />
             </a>
 
@@ -140,7 +140,7 @@ export default function HeroSection() {
                 letterSpacing: "0.12em",
               }}
             >
-              {t("联系启明大师", "Contact Master Qiming")}
+              {t("预约咨询", "Book a Consultation")}
             </a>
           </motion.div>
 
@@ -152,9 +152,9 @@ export default function HeroSection() {
             className="grid sm:grid-cols-3 gap-3 max-w-4xl"
           >
             {[
-              t("奇门决策", "Qimen Strategy"),
-              t("梵音心源疗愈", "Sacred Sound Healing"),
-              t("文化策划与顾问", "Cultural Advisory"),
+              t("奇门决策", "Qi Men Decision Advisory"),
+              t("战略风水布局", "Strategic Feng Shui"),
+              t("能量调频实践", "Energy Alignment"),
             ].map((item, i) => (
               <div
                 key={i}
@@ -176,7 +176,7 @@ export default function HeroSection() {
             style={{ fontFamily: "'Lato', sans-serif" }}
           >
             <MapPin size={11} className="text-[oklch(0.60_0.08_65)]" />
-            <span>Singapore · Founded by Master Huang Qiming, Founder of Qimen Strategy</span>
+            <span>Singapore · Founded by Huang Qiming, Founder of Qimen Strategy</span>
           </motion.div>
         </div>
       </div>
