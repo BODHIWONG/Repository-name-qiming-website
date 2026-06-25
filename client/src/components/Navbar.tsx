@@ -3,7 +3,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Menu, X } from "lucide-react";
 
 const LOGO_URL = "/logo-qimen-strategy.png";
-const WA_LINK = "https://wa.me/6589418791?text=Hello%2C%20I%20would%20like%20to%20learn%20more%20about%20Tian%20Yi%20He%20Hui%20and%20Eastern%20Strategic%20Intelligence.";
+const WA_LINK = "https://wa.me/6589418791?text=Hello%20Qimen%20Strategy%2C%20I%20would%20like%20to%20consult%20about%20Qi%20Men%20Dun%20Jia%20Strategic%20Decision%20Advisory%20in%20Singapore.";
 
 export default function Navbar() {
   const { lang, setLang, t } = useLanguage();
@@ -17,9 +17,9 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { href: "#services", zh: "三大主轴", en: "Three Pillars" },
+    { href: "#services", zh: "顾问服务", en: "Services" },
     { href: "#master", zh: "关于启明", en: "Founder" },
-    { href: "/journal-ai-era-eastern-intelligence", zh: "思想档案", en: "Journal" },
+    { href: "/journal-ai-era-eastern-intelligence", zh: "洞察", en: "Insights" },
     { href: "#contact", zh: "联系", en: "Contact" },
   ];
 
@@ -35,7 +35,7 @@ export default function Navbar() {
         <a href="#" className="flex items-center gap-4 group">
           <img
             src={LOGO_URL}
-            alt="Tian Yi He Hui Qimen Strategy Symbol"
+            alt="Qimen Strategy Symbol"
             className="h-14 md:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
           />
           <div>
@@ -43,10 +43,10 @@ export default function Navbar() {
               style={{ fontFamily: "'Cormorant Garamond', 'Noto Serif SC', serif" }}
               className="hidden sm:block text-xl md:text-2xl font-semibold text-[oklch(0.15_0.02_60)] tracking-wide group-hover:text-[oklch(0.60_0.08_65)] transition-colors duration-300"
             >
-              {t("天乙合会", "Tian Yi He Hui")}
+              {t("启明遁甲", "Qimen Strategy")}
             </span>
             <span className="hidden sm:block text-[0.7rem] tracking-[0.28em] uppercase text-[oklch(0.60_0.08_65)]">
-              Eastern Strategic Intelligence
+              Strategic Feng Shui Advisory
             </span>
           </div>
         </a>
@@ -84,12 +84,8 @@ export default function Navbar() {
               letterSpacing: "0.12em",
             }}
           >
-            {t("东方洞察", "Strategic Insight")}
+            {t("预约咨询", "Book Consultation")}
           </a>
-
-          <button onClick={() => setMenuOpen(!menuOpen)} className="lg:hidden p-2 text-[oklch(0.15_0.02_60)]">
-            {menuOpen ? <X size={20} /> : <Menu size={20} />}
-          </button>
         </div>
       </div>
 
