@@ -3,7 +3,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { MapPin, ArrowRight } from "lucide-react";
 import { MapView } from "@/components/Map";
 
-const WA_LINK = "https://wa.me/6589418791?text=Hello%2C%20I%20would%20like%20to%20learn%20more%20about%20Tian%20Yi%20He%20Hui.";
+const WA_LINK = "https://wa.me/6589418791?text=Hello%20Qimen%20Strategy%2C%20I%20would%20like%20to%20consult%20about%20Qi%20Men%20Dun%20Jia%20Strategic%20Decision%20Advisory%20in%20Singapore.";
 
 const STUDIO_LAT = 1.3236;
 const STUDIO_LNG = 103.9273;
@@ -27,7 +27,7 @@ export default function ContactSection() {
               className="text-[0.6rem] tracking-[0.25em] uppercase font-semibold"
               style={{ fontFamily: "'Lato', sans-serif", color: "oklch(0.60 0.08 65)" }}
             >
-              {t("东方智慧空间 · 新加坡", "Eastern Intelligence Space · Singapore")}
+              {t("启明遁甲 · 新加坡", "Qimen Strategy · Singapore")}
             </span>
           </div>
 
@@ -39,7 +39,7 @@ export default function ContactSection() {
               color: "oklch(0.95 0.01 75)",
             }}
           >
-            {t("一个关于意识、环境与战略觉察的空间", "A Space for Consciousness, Environment and Strategic Awareness")}
+            {t("在关键选择前，先看清局势", "See the Whole Game Before You Decide")}
           </h2>
 
           <p
@@ -47,8 +47,8 @@ export default function ContactSection() {
             style={{ fontFamily: "'Lato', 'Noto Sans SC', sans-serif", color: "oklch(0.65 0.02 65)" }}
           >
             {t(
-              "天乙合会并非传统意义上的风水门店，而是一个探索东方战略智慧、奇门决策、梵音疗愈与环境意识的思想空间。",
-              "Tian Yi He Hui is not a conventional Feng Shui shop, but a contemplative space exploring Eastern strategic intelligence, Qimen Strategy, sacred sound healing and environmental consciousness."
+              "启明遁甲位于新加坡 Bedok，提供奇门决策、战略风水布局与能量调频咨询，帮助客户在事业、家庭、空间与人生关键阶段中建立更清晰的判断与布局。",
+              "Qimen Strategy is based in Bedok, Singapore, providing Qi Men decision advisory, strategic Feng Shui and energy alignment for clearer judgment and better alignment in business, family, space and key life transitions."
             )}
           </p>
         </motion.div>
@@ -74,7 +74,7 @@ export default function ContactSection() {
                   className="text-base font-semibold mb-1"
                   style={{ fontFamily: "'Lato', sans-serif", color: "oklch(0.92 0.01 75)" }}
                 >
-                  Tian Yi He Hui · Singapore
+                  Qimen Strategy · Singapore
                 </p>
 
                 <p
@@ -95,10 +95,10 @@ export default function ContactSection() {
 
             <div className="grid grid-cols-2 gap-3">
               {[
-                t("Qimen Strategy", "Qimen Strategy"),
-                t("Sacred Sound Healing", "Sacred Sound Healing"),
-                t("Mind & Environment", "Mind & Environment"),
-                t("Eastern Intelligence", "Eastern Intelligence"),
+                t("奇门决策", "Qi Men Advisory"),
+                t("战略风水", "Strategic Feng Shui"),
+                t("能量调频", "Energy Alignment"),
+                t("空间净化", "Space Clearing"),
               ].map((item, i) => (
                 <div
                   key={i}
@@ -122,7 +122,7 @@ export default function ContactSection() {
                 letterSpacing: "0.12em",
               }}
             >
-              {t("进入东方洞察", "Enter Eastern Insight")}
+              {t("预约咨询", "Book a Consultation")}
               <ArrowRight size={14} />
             </a>
           </motion.div>
