@@ -86,6 +86,10 @@ export default function Navbar() {
           >
             {t("预约咨询", "Book Consultation")}
           </a>
+
+          <button onClick={() => setMenuOpen(!menuOpen)} className="lg:hidden p-2 text-[oklch(0.15_0.02_60)]">
+            {menuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
         </div>
       </div>
 
