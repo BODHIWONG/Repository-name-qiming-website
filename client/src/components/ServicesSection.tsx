@@ -8,29 +8,29 @@ export default function ServicesSection() {
     {
       no: "01",
       zh: "奇门决策",
-      en: "Qimen Strategy",
-      zhSub: "以时机、方向、人事与环境，看清人生与事业的局势。",
-      enSub: "Reading timing, direction, people dynamics and environment before major life or business decisions.",
-      pointsZh: ["人生方向", "企业判断", "时机与布局"],
-      pointsEn: ["Life Direction", "Business Decisions", "Timing & Positioning"],
+      en: "Qi Men Decision Advisory",
+      zhSub: "以奇门遁甲审视时机、方向、人事与风险，帮助客户在关键选择前看清局势。",
+      enSub: "Using Qi Men Dun Jia to review timing, direction, people dynamics and risk before important life or business decisions.",
+      pointsZh: ["重大决策", "事业与企业判断", "时机与方向"],
+      pointsEn: ["Major Decisions", "Business Direction", "Timing & Direction"],
     },
     {
       no: "02",
-      zh: "梵音心源疗愈",
-      en: "Sacred Sound Healing",
-      zhSub: "以声音、呼吸与空间安顿身心，让人从紧张与内耗中回到清明。",
-      enSub: "Using sacred sound, breath and space to support deep rest, inner stillness and emotional restoration.",
-      pointsZh: ["身心安顿", "睡眠与情绪", "内在清明"],
-      pointsEn: ["Deep Rest", "Sleep & Emotion", "Inner Stillness"],
+      zh: "战略风水布局",
+      en: "Strategic Feng Shui",
+      zhSub: "从空间、动线、气场与人事关系入手，让环境更好地支持事业、家庭与长期发展。",
+      enSub: "Aligning space, movement, energy flow and human dynamics so the environment better supports business, family and long-term growth.",
+      pointsZh: ["企业空间", "居家风水", "布局优化"],
+      pointsEn: ["Business Space", "Home Feng Shui", "Layout Alignment"],
     },
     {
       no: "03",
-      zh: "文化策划与顾问",
-      en: "Cultural Advisory",
-      zhSub: "将东方智慧转化为品牌、空间、内容与教育体系。",
-      enSub: "Translating Eastern wisdom into brand systems, spaces, content and cultural education.",
-      pointsZh: ["品牌文化", "空间叙事", "课程与顾问"],
-      pointsEn: ["Brand Culture", "Spatial Narrative", "Education & Advisory"],
+      zh: "能量调频实践",
+      en: "Energy Alignment",
+      zhSub: "通过空间净化、声音与能量调理，帮助人从内耗、混乱与沉重中回到清晰稳定。",
+      enSub: "Supporting clarity and stability through space clearing, sound-based practice and energy alignment.",
+      pointsZh: ["空间净化", "状态调整", "身心安定"],
+      pointsEn: ["Space Clearing", "State Alignment", "Inner Stability"],
     },
   ];
 
@@ -50,7 +50,7 @@ export default function ServicesSection() {
               className="text-[0.6rem] tracking-[0.25em] uppercase text-[oklch(0.60_0.08_65)] font-semibold"
               style={{ fontFamily: "'Lato', sans-serif" }}
             >
-              {t("天乙合会三大主轴", "The Three Pillars of Tian Yi He Hui")}
+              {t("启明遁甲核心体系", "The Qimen Strategy Framework")}
             </span>
           </div>
 
@@ -62,7 +62,7 @@ export default function ServicesSection() {
               color: "oklch(0.12 0.02 60)",
             }}
           >
-            {t("不是服务堆叠，而是一套东方战略智慧系统", "Not a List of Services, but an Eastern Strategic Intelligence System")}
+            {t("不是单一服务，而是一套环境、状态与决策的调衡系统", "Not a Single Service, but a System of Environment, State and Decision Alignment")}
           </h2>
 
           <p
@@ -70,8 +70,8 @@ export default function ServicesSection() {
             style={{ fontFamily: "'Lato', 'Noto Sans SC', sans-serif" }}
           >
             {t(
-              "qmmind.com 承载天乙合会的思想高度：以奇门决策见方向，以梵音疗愈安顿身心，以文化策划承载东方智慧。",
-              "qmmind.com carries the thought-level identity of Tian Yi He Hui: Qimen Strategy clarifies direction, sacred sound healing restores inner stillness, and cultural advisory translates Eastern wisdom into modern forms."
+              "启明遁甲以奇门决策看清局势，以战略风水调整空间，以能量调频稳定状态，帮助客户在天时、地利、人和之间建立更清晰的判断与布局。",
+              "Qimen Strategy uses Qi Men decision advisory to clarify the situation, strategic Feng Shui to align the environment, and energy alignment to support a steadier state before important decisions."
             )}
           </p>
         </motion.div>
@@ -91,7 +91,7 @@ export default function ServicesSection() {
                   {pillar.no}
                 </span>
                 <span className="text-[0.55rem] tracking-[0.2em] uppercase text-[oklch(0.60_0.08_65)]">
-                  Pillar
+                  Framework
                 </span>
               </div>
 
