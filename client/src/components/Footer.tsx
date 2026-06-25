@@ -1,5 +1,4 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Instagram, Facebook, Youtube } from "lucide-react";
 
 const LOGO_URL = "/logo-qimen-strategy.png";
 
@@ -7,7 +6,7 @@ export default function Footer() {
   const { t } = useLanguage();
 
   const navLinks = [
-    { href: "#services", zh: "三大主轴", en: "Three Pillars" },
+    { href: "#services", zh: "顾问服务", en: "Services" },
     { href: "#master", zh: "关于启明", en: "Founder" },
     { href: "#contact", zh: "联系", en: "Contact" },
   ];
@@ -25,10 +24,10 @@ export default function Footer() {
               />
               <div>
                 <p className="display-heading text-lg text-white mb-0.5">
-                  {t("天乙合会", "Tian Yi He Hui")}
+                  {t("启明遁甲", "Qimen Strategy")}
                 </p>
                 <p className="text-[0.55rem] tracking-[0.22em] uppercase text-[oklch(0.60_0.08_65)]">
-                  Eastern Strategic Intelligence
+                  Strategic Feng Shui Advisory
                 </p>
               </div>
             </div>
@@ -38,8 +37,8 @@ export default function Footer() {
               style={{ fontFamily: "'Lato', 'Noto Sans SC', sans-serif" }}
             >
               {t(
-                "探索心识、环境、时机与战略觉察之间的深层关系。",
-                "Exploring the relationship between mind, timing, environment and strategic awareness."
+                "环境影响状态，状态影响决策，决策最终塑造结果。",
+                "Environment shapes state, state shapes decisions, and decisions shape outcomes."
               )}
             </p>
           </div>
@@ -67,7 +66,7 @@ export default function Footer() {
           <div>
             <p className="text-[0.6rem] font-bold tracking-[0.2em] uppercase text-[oklch(0.60_0.08_65)] mb-4"
               style={{ fontFamily: "'Lato', sans-serif" }}>
-              Eastern Strategic Intelligence
+              Qimen Strategy
             </p>
 
             <div
@@ -76,8 +75,8 @@ export default function Footer() {
             >
               <p>
                 {t(
-                  "奇门决策 · 梵音疗愈 · 文化顾问",
-                  "Qimen Strategy · Sacred Sound Healing · Cultural Advisory"
+                  "奇门决策 · 战略风水 · 能量调频",
+                  "Qi Men Decision Advisory · Strategic Feng Shui · Energy Alignment"
                 )}
               </p>
 
@@ -93,13 +92,13 @@ export default function Footer() {
           style={{ fontFamily: "'Lato', sans-serif" }}
         >
           <p>
-            © {new Date().getFullYear()} Tian Yi He Hui
+            © {new Date().getFullYear()} Qimen Strategy
           </p>
 
           <p>
             {t(
-              "AI时代东方智慧平台",
-              "Eastern wisdom platform for the AI era"
+              "启明遁甲 · 新加坡",
+              "Singapore-based strategic Feng Shui advisory"
             )}
           </p>
         </div>
