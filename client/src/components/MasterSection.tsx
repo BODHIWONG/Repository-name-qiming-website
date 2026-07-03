@@ -163,7 +163,7 @@ export default function MasterSection() {
             {/* CTA */}
             <motion.div custom={4} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn}>
               <a
-                href="https://wa.me/6589418791?text=Hello%2C%20I%27d%20like%20a%20Deep%20Insight%20session%20with%20Master%20Qiming."
+                href="https://wa.me/6589593499"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-7 py-3.5 text-sm font-bold tracking-widest uppercase transition-all duration-300 hover:opacity-90"
