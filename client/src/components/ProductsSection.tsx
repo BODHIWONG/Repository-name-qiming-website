@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { ArrowRight } from "lucide-react";
 
-const WA_PRODUCTS = "https://wa.me/6589418791?text=Hello%2C%20I%27m%20interested%20in%20the%20Auspicious%20Catalysts%20recommended%20by%20Master%20Qiming.";
+const WA_PRODUCTS = "https://wa.me/6589593499?text=Hello%2C%20I%27m%20interested%20in%20the%20Auspicious%20Catalysts%20recommended%20by%20Master%20Qiming.";
 
 const PRODUCTS = [
   {
