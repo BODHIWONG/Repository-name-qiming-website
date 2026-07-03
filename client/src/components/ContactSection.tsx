@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { MapPin, ArrowRight } from "lucide-react";
+import { MapPin, Phone, ArrowRight } from "lucide-react";
 import { MapView } from "@/components/Map";
 
-const WA_LINK = "https://wa.me/6589418791?text=Hello%20Qimen%20Strategy%2C%20I%20would%20like%20to%20consult%20about%20Qi%20Men%20Dun%20Jia%20Strategic%20Decision%20Advisory%20in%20Singapore.";
+const WA_LINK = "https://wa.me/6589593499?text=Hello%20Qimen%20Strategy%2C%20I%20would%20like%20to%20consult%20about%20Qi%20Men%20Dun%20Jia%20Strategic%20Decision%20Advisory%20in%20Singapore.";
+const PHONE_LINK = "tel:+6589593499";
+const PHONE_DISPLAY = "+65 89593499";
 
 const STUDIO_LAT = 1.3236;
 const STUDIO_LNG = 103.9273;
@@ -89,6 +91,39 @@ export default function ContactSection() {
                   style={{ fontFamily: "'Lato', sans-serif", color: "oklch(0.65 0.02 65)" }}
                 >
                   Singapore 460210
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div
+                className="w-10 h-10 flex items-center justify-center flex-shrink-0"
+                style={{ border: "1px solid oklch(0.60 0.08 65)" }}
+              >
+                <Phone size={16} style={{ color: "oklch(0.60 0.08 65)" }} />
+              </div>
+
+              <div>
+                <p
+                  className="text-base font-semibold mb-1"
+                  style={{ fontFamily: "'Lato', sans-serif", color: "oklch(0.92 0.01 75)" }}
+                >
+                  {t("联络电话", "Contact Phone")}
+                </p>
+
+                <a
+                  href={PHONE_LINK}
+                  className="text-sm hover:text-[oklch(0.60_0.08_65)] transition-colors duration-300"
+                  style={{ fontFamily: "'Lato', sans-serif", color: "oklch(0.65 0.02 65)" }}
+                >
+                  {PHONE_DISPLAY}
+                </a>
+
+                <p
+                  className="text-xs mt-1"
+                  style={{ fontFamily: "'Lato', sans-serif", color: "oklch(0.50 0.02 65)" }}
+                >
+                  WhatsApp: wa.me/6589593499
                 </p>
               </div>
             </div>
