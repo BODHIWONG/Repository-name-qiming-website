@@ -36,7 +36,7 @@ export default function FloatingActions() {
 
       {/* WhatsApp */}
       <motion.a
-        href="https://wa.me/6589418791?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20Master%20Qiming."
+        href="https://wa.me/6589593499?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20Master%20Qiming."
         target="_blank"
         rel="noopener noreferrer"
         initial={{ opacity: 0, scale: 0.8 }}
