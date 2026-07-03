@@ -240,8 +240,8 @@ export default function SpacePurificationSection() {
                 <p className="text-sm text-[oklch(0.55_0.01_75)] leading-relaxed italic"
                   style={{ fontFamily: "'Lato', 'Noto Sans SC', sans-serif" }}>
                   {t(
-                    "「一进到屋子，瞅哪都害怕，就好像毛骨悚然那种感觉。早上起来就像要死要死，眼睛都是青的……」",
-                    '"Every time I entered the room, I was terrified of everything — a bone-chilling feeling. Waking up in the morning felt like dying, my eyes even turned bluish…"'
+                    "「一进到屋子，瞅哪都不安心，就好像很压抑的感觉。早上起来很不舒服，眼睛都是青的……」",
+                    '"Every time I entered the room, I felt uneasy and oppressed. Waking up in the morning felt extremely weak, and my eyes even looked bluish…"'
                   )}
                 </p>
               </div>
@@ -376,7 +376,7 @@ export default function SpacePurificationSection() {
               ))}
             </ul>
             <a
-              href="https://wa.me/6589418791?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20Space%20Purification%20service."
+              href="https://wa.me/6589593499?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20Space%20Purification%20service."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-[oklch(0.60_0.08_65)] hover:bg-[oklch(0.50_0.07_60)] text-white px-6 py-3 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 w-full justify-center"
