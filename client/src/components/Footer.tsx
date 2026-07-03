@@ -1,6 +1,9 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const LOGO_URL = "/logo-qimen-strategy.png";
+const PHONE_DISPLAY = "+65 89593499";
+const PHONE_LINK = "tel:+6589593499";
+const WA_LINK = "https://wa.me/6589593499";
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -81,6 +84,16 @@ export default function Footer() {
               </p>
 
               <p>Singapore</p>
+              <p>
+                <a href={PHONE_LINK} className="hover:text-[oklch(0.60_0.08_65)] transition-colors duration-300">
+                  {PHONE_DISPLAY}
+                </a>
+              </p>
+              <p>
+                <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="hover:text-[oklch(0.60_0.08_65)] transition-colors duration-300">
+                  WhatsApp: wa.me/6589593499
+                </a>
+              </p>
             </div>
           </div>
         </div>
